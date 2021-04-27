@@ -163,7 +163,7 @@ export default function NavBar({
                 </button>
             </div>
             <div
-                className={`absolute font-medium w-screen bg-white dark:bg-black left-0 top-20 p-6 flex items-center content-center flex-col justify-center h-fill-80 uppercase ${
+                className={`absolute font-medium w-screen bg-white dark:bg-black left-0 top-20 p-6 flex items-center content-center flex-col justify-center h-fill-80 pb-24 uppercase ${
                     open ? 'block' : 'hidden'
                 }`}
             >
