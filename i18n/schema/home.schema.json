@@ -1,0 +1,44 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "keywords": {
+            "type": "string"
+        },
+        "home": {
+            "type": "string"
+        },
+        "projects": {
+            "type": "string"
+        },
+        "about": {
+            "type": "string"
+        },
+        "contact": {
+            "type": "string"
+        },
+        "hamburger": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "$schema",
+        "title",
+        "description",
+        "keywords",
+        "home",
+        "projects",
+        "about",
+        "contact",
+        "hamburger"
+    ]
+}
