@@ -25,7 +25,7 @@ export default function Home({
                     rel="stylesheet"
                 />
                 <link
-                    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
+                    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
                     rel="stylesheet"
                 />
             </Head>

@@ -7,4 +7,5 @@ interface Translation {
     about: string;
     contact: string;
     hamburgerHelper: string;
+    lang: string;
 }

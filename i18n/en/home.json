@@ -7,5 +7,6 @@
     "projects": "projects",
     "about": "about",
     "contact": "contact",
-    "hamburger": "Open Menu"
+    "hamburgerHelper": "Open Menu",
+    "lang": "language"
 }
