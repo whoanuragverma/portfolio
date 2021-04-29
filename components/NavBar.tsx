@@ -19,7 +19,7 @@ export default function NavBar({
         }
     }
     return (
-        <nav className="font-raleway font-bold px-6 md:px-12 py-6 fixed flex items-center w-screen animate-fadeIn bg-white dark:bg-black dark:text-white z-10">
+        <nav className="font-raleway top-0 font-bold px-6 md:px-12 py-6 fixed flex items-center w-screen animate-fadeIn bg-white dark:bg-black dark:text-white z-10">
             <Link href="/">
                 <span className="flex items-center space-x-4 cursor-pointer">
                     <svg
@@ -235,7 +235,7 @@ export default function NavBar({
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
                             height="24"
-                            className="fill-current transition hover:text-red-600"
+                            className="fill-current transition hover:text-swatch-redActive"
                             viewBox="0 0 256 256"
                         >
                             <rect width="256" height="256" fill="none"></rect>
@@ -257,7 +257,7 @@ export default function NavBar({
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
                             height="24"
-                            className="fill-current transition hover:text-blue-500"
+                            className="fill-current transition hover:text-swatch-blueActive"
                             viewBox="0 0 256 256"
                         >
                             <rect width="256" height="256" fill="none"></rect>

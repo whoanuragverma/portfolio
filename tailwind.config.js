@@ -6,6 +6,16 @@ module.exports = {
     darkMode: 'class',
     theme: {
         extend: {
+            colors: {
+                swatch: {
+                    red: '#FF4000',
+                    redActive: '#FB6837',
+                    yellow: '#FFB627',
+                    yellowActive: '#FFC971',
+                    blue: '#4169e1',
+                    blueActive: '#6495ed',
+                },
+            },
             fontFamily: {
                 raleway: ['Raleway', 'sans-serif'],
                 montserrat: ['Montserrat', 'sans-serif'],

@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next';
 import { promises as fs } from 'fs';
 import Head from 'next/head';
 import NavBar from 'components/NavBar';
+import MainSection from 'components/MainSection';
 
 export default function Home({
     translation,
@@ -9,7 +10,7 @@ export default function Home({
     translation: Translation;
 }): JSX.Element {
     return (
-        <div className="container">
+        <>
             <Head>
                 <meta name="description" content={translation.description} />
                 <meta name="keywords" content={translation.keywords} />
@@ -21,16 +22,16 @@ export default function Home({
                 />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link
-                    href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
-                    rel="stylesheet"
-                />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+                    href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&family=Montserrat:wght@200&display=swap"
                     rel="stylesheet"
                 />
             </Head>
+
             <NavBar translation={translation} />
-        </div>
+            <div className="container mt-20">
+                <MainSection translation={translation} />
+            </div>
+        </>
     );
 }
 

@@ -8,4 +8,20 @@ interface Translation {
     contact: string;
     hamburgerHelper: string;
     lang: string;
+    greeting: string;
+    heroP1: {
+        part0: string;
+        link01: string;
+        part1: string;
+    };
+    heroP2: {
+        part0: string;
+        link01: string;
+        part1: string;
+    };
+    heroP3: {
+        part0: string;
+        link01: string;
+        part1: string;
+    };
 }

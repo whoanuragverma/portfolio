@@ -8,5 +8,21 @@
     "about": "about",
     "contact": "contact",
     "hamburgerHelper": "Open Menu",
-    "lang": "language"
+    "lang": "language",
+    "greeting": "Hello! I am Anurag Verma. 👋🏻 Pleased to meet you!",
+    "heroP1": {
+        "part0": "I am currently in my sophomore year at ",
+        "link01": "VIT University - Vellore",
+        "part1": " pursuing Computer Science Engineering. I like to work with full-stack Web Apps be it Angular, React, or old-school HTML with Express or Flask. I also like to work with C++ and Python for general software development."
+    },
+    "heroP2": {
+        "part0": "Currently I am working on a blockchain based messenger project ",
+        "link01": "Meschain",
+        "part1": " and also improving my DSA skills."
+    },
+    "heroP3": {
+        "part0": "In my free time I like to contribute to ",
+        "link01": "Open Source",
+        "part1": "💪🏻 and also learn new things. 📚"
+    }
 }
