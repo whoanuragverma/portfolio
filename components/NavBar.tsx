@@ -19,7 +19,7 @@ export default function NavBar({
         }
     }
     return (
-        <nav className="font-raleway top-0 font-bold px-6 md:px-12 py-6 fixed flex items-center w-screen animate-fadeIn bg-white dark:bg-black dark:text-white z-10">
+        <nav className="font-raleway shadow top-0 font-bold px-6 md:px-12 py-6 fixed flex items-center w-screen animate-fadeIn bg-white dark:bg-black dark:text-white z-10">
             <Link href="/">
                 <span className="flex items-center space-x-4 cursor-pointer">
                     <svg
