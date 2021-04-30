@@ -7,7 +7,7 @@ export default function MainSection({
     translation: Translation;
 }): JSX.Element {
     return (
-        <div className="bg-white dark:bg-black px-6 py-6 md:px-12 text-black dark:text-white flex flex-col md:flex-row md:justify-evenly font-raleway md:pb-0 pb-4 ">
+        <div className="bg-white dark:bg-black px-6 py-6 md:px-12 text-black dark:text-white flex flex-col md:flex-row md:justify-evenly font-raleway md:pb-0 pb-4 w-screen">
             <span className="md:w-1/2 w-full font-semibold text-3xl md:leading-normal md:text-4xl pt-2 md:self-center">
                 {translation.greeting}
             </span>
