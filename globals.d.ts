@@ -25,3 +25,11 @@ interface Translation {
         part1: string;
     };
 }
+
+interface Projects {
+    title: string;
+    imgPath: string;
+    link: string;
+    para1: string;
+    para2: string;
+}

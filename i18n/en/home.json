@@ -1,14 +1,4 @@
 {
-    "$schema": "file:///portfolio/i18n/schema/home.schema.json",
-    "title": "Anurag Verma",
-    "description": "Anurag Verma is currently pursuing B. Tech in CSE and is interested in Web Development, Machine Learning and Software Development.",
-    "keywords": "Anurag Verma, Engineer, Web Development, Machine Learning, whoanuragverma",
-    "home": "home",
-    "projects": "projects",
-    "about": "about",
-    "contact": "contact",
-    "hamburgerHelper": "Open Menu",
-    "lang": "language",
     "greeting": "Hello! I am Anurag Verma. 👋🏻 Pleased to meet you!",
     "heroP1": {
         "part0": "I am currently in my sophomore year at ",

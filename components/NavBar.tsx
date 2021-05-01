@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 export default function NavBar({
     translation,
 }: {
@@ -9,12 +9,26 @@ export default function NavBar({
     const router = useRouter();
     const [open, setOpen] = useState(false);
     const [theme, setTheme] = useState('light');
+    useEffect(() => {
+        setTheme(localStorage.theme || theme);
+        if (
+            localStorage.theme === 'dark' ||
+            (!('theme' in localStorage) &&
+                window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    }, []);
     function changeTheme() {
         if (theme === 'dark') {
             document.documentElement.classList.remove('dark');
+            localStorage.theme = 'light';
             setTheme('light');
         } else {
             document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
             setTheme('dark');
         }
     }
