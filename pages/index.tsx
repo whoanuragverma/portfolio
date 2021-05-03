@@ -4,6 +4,8 @@ import Head from 'next/head';
 import NavBar from 'components/NavBar';
 import MainSection from 'components/MainSection';
 import Project from 'components/Project';
+import { getImage } from '@plaiceholder/next';
+import { getBase64 } from '@plaiceholder/base64';
 
 export default function Home({
     translation,
@@ -37,10 +39,14 @@ export default function Home({
                 <MainSection translation={translation} />
                 <span className="block w-full h-px bg-black my-16 dark:bg-white opacity-20"></span>
                 <h2 className="text-3xl font-raleway pb-5 font-bold">
-                    Featured Projects
+                    {translation.featured}
                 </h2>
                 <Project {...meschain} />
                 <Project {...ratemyprof} />
+                <span className="block w-full h-px bg-black my-16 dark:bg-white opacity-20"></span>
+                <h2 className="text-3xl font-raleway pb-5 font-bold">
+                    Get in Touch
+                </h2>
             </div>
         </>
     );
@@ -56,9 +62,11 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     const meschain: Projects = JSON.parse(
         await fs.readFile(`i18n/${locale}/projects/meschain.json`, 'utf-8')
     );
+    meschain.imgBase64 = await getBase64(await getImage(meschain.imgPath));
     const ratemyprof: Projects = JSON.parse(
         await fs.readFile(`i18n/${locale}/projects/ratemyprof.json`, 'utf-8')
     );
+    ratemyprof.imgBase64 = await getBase64(await getImage(ratemyprof.imgPath));
     const translation: Translation = { ...common, ...home };
     return {
         props: {

@@ -1,7 +1,8 @@
 {
-    "title": "Meschain",
+    "title": "मेसचेन",
     "imgPath": "/meschain.jpg",
     "link": "/project/meschain",
-    "para1": "Meschain aims to solve the major problem with Messenging Apps, Privacy. It is designed on top of blockchain network powered by users with XSalsa20 based public-key authenticated Encryption.",
-    "para2": "Everything is encrypted by default and decentralised to the user level. With just a browser anyone can use this selfless messenger."
+    "para1": "मेसचेन का उद्देश्य मैसेजिंग ऐप की प्रमुख समस्या को हल करना है, गोपनीयता। यह ब्लॉकचैन नेटवर्क के शीर्ष पर डिज़ाइन किया गया है जो कि XSalsa20 आधारित सार्वजनिक-कुंजी प्रमाणित एन्क्रिप्शन वाले उपयोगकर्ताओं द्वारा संचालित है।",
+    "para2": "सब कुछ डिफ़ॉल्ट रूप से एन्क्रिप्ट किया गया है और उपयोगकर्ता स्तर तक विकेंद्रीकृत है। केवल एक ब्राउज़र के साथ कोई भी इस निस्वार्थ संदेशवाहक का उपयोग कर सकता है।",
+    "view": "प्रोजेक्ट देखें"
 }

@@ -1,9 +1,11 @@
+require('sharp');
+
 module.exports = {
     future: {
         webpack5: true,
     },
     i18n: {
-        locales: ["en", "hi"],
-        defaultLocale: "en",
+        locales: ['en', 'hi'],
+        defaultLocale: 'en',
     },
 };

@@ -10,7 +10,12 @@ export default function NavBar({
     const [open, setOpen] = useState(false);
     const [theme, setTheme] = useState('light');
     useEffect(() => {
-        setTheme(localStorage.theme || theme);
+        setTheme(
+            localStorage.theme ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches &&
+                    'dark') ||
+                theme
+        );
         if (
             localStorage.theme === 'dark' ||
             (!('theme' in localStorage) &&

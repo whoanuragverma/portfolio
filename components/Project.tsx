@@ -6,16 +6,26 @@ export default function Project({
     link,
     para1,
     para2,
+    imgBase64,
+    view,
 }: {
     title: string;
     imgPath: string;
     link: string;
     para1: string;
     para2: string;
+    imgBase64: string;
+    view: string;
 }): JSX.Element {
     return (
         <div className="flex flex-col md:flex-row md:justify-evenly font-raleway my-8 animate-fadeIn">
-            <span className="md:w-1/2 w-full text-2xl md:leading-normal pt-2 md:self-center">
+            <span className="md:w-1/2 w-full md:self-center relative">
+                <img
+                    aria-hidden="true"
+                    alt="Placeholder"
+                    src={imgBase64}
+                    className="block w-full absolute h-full rounded-xl transform blur-3xl"
+                />
                 <Image
                     src={imgPath}
                     width={430}
@@ -24,6 +34,7 @@ export default function Project({
                     loading="lazy"
                     quality={100}
                     className="rounded-xl"
+                    alt={title}
                 />
             </span>
             <span className="md:w-1/2 w-full font-medium text-2xl py-5 px-0 md:px-5 md:py-3">
@@ -31,7 +42,7 @@ export default function Project({
                 <p className="leading-5 text-base my-2">{para1}</p>
                 <p className="leading-5 text-base my-2">{para2}</p>
                 <Button
-                    label="Learn More"
+                    label={view}
                     hasLink={true}
                     nextLink={true}
                     url={link}

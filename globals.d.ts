@@ -9,6 +9,7 @@ interface Translation {
     hamburgerHelper: string;
     lang: string;
     greeting: string;
+    featured: string;
     heroP1: {
         part0: string;
         link01: string;
@@ -24,6 +25,7 @@ interface Translation {
         link01: string;
         part1: string;
     };
+    resume: string;
 }
 
 interface Projects {
@@ -32,4 +34,6 @@ interface Projects {
     link: string;
     para1: string;
     para2: string;
+    imgBase64: string;
+    view: string;
 }

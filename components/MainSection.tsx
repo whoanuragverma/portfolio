@@ -41,7 +41,7 @@ export default function MainSection({
                 <Button
                     hasLink={true}
                     url="./resume.pdf"
-                    label="download resume"
+                    label={translation.resume}
                     svg={
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
