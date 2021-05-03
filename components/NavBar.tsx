@@ -114,6 +114,7 @@ export default function NavBar({
                 <button
                     className="mx-3 focus:outline-none"
                     onClick={changeTheme}
+                    aria-label="Change Theme"
                 >
                     {theme === 'dark' && (
                         <svg
