@@ -6,15 +6,18 @@ import MainSection from 'components/MainSection';
 import Project from 'components/Project';
 import { getImage } from '@plaiceholder/next';
 import { getBase64 } from '@plaiceholder/base64';
+import About from 'components/About';
 
 export default function Home({
     translation,
     meschain,
     ratemyprof,
+    about,
 }: {
     translation: Translation;
     meschain: Projects;
     ratemyprof: Projects;
+    about: About;
 }): JSX.Element {
     return (
         <>
@@ -45,8 +48,9 @@ export default function Home({
                 <Project {...ratemyprof} />
                 <span className="block w-full h-px bg-black my-16 dark:bg-white opacity-20"></span>
                 <h2 className="text-3xl font-raleway pb-5 font-bold">
-                    Get in Touch
+                    {translation.touch}
                 </h2>
+                <About {...about} />
             </div>
         </>
     );
@@ -68,11 +72,16 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     );
     ratemyprof.imgBase64 = await getBase64(await getImage(ratemyprof.imgPath));
     const translation: Translation = { ...common, ...home };
+    const about: About = JSON.parse(
+        await fs.readFile(`i18n/${locale}/about.json`, 'utf-8')
+    );
+
     return {
         props: {
             translation: translation,
             meschain: meschain,
             ratemyprof: ratemyprof,
+            about: about,
         },
     };
 };

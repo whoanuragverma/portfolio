@@ -10,6 +10,7 @@ interface Translation {
     lang: string;
     greeting: string;
     featured: string;
+    touch: string;
     heroP1: {
         part0: string;
         link01: string;
@@ -36,4 +37,10 @@ interface Projects {
     para2: string;
     imgBase64: string;
     view: string;
+}
+
+interface About {
+    src: string;
+    b64: string;
+    salute: string;
 }
