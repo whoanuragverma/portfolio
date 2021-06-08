@@ -7,6 +7,7 @@ import Project from 'components/Project';
 import { getImage } from '@plaiceholder/next';
 import { getBase64 } from '@plaiceholder/base64';
 import About from 'components/About';
+import SocialButtons from 'components/SocialButtons';
 
 export default function Home({
     translation,
@@ -51,6 +52,7 @@ export default function Home({
                     {translation.touch}
                 </h2>
                 <About {...about} />
+                <SocialButtons {...about} />
             </div>
         </>
     );

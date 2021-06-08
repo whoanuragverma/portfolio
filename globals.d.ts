@@ -43,4 +43,13 @@ interface About {
     src: string;
     b64: string;
     salute: string;
+    resume: string;
+    intro: {
+        para1: string;
+        para2: string;
+        para3: string;
+    };
+    hi: string;
+    findMe: string;
+    email: string;
 }

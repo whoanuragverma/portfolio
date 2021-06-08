@@ -1,4 +1,13 @@
 {
     "src": "/cover.jpg",
-    "salute": "Hi, I'm Anurag!"
+    "salute": "Hi, I'm Anurag!",
+    "intro": {
+        "para1": "I am a student of Computer Science and Engineering with specialization in Internet of Things in my Sophomore year in Vellore Institute of Technology.",
+        "para2": "My academic studies unfold through a series of projects that engaged critical design analysis in distinctive ways and innovated experimentations through multidisciplinary approaches. With strong interst in Web Developement I have built several different technologies including but not limited Angular, React, Python, C++ and Java.",
+        "para3": "I am currently looking for internship opportunity in the field of software development for closely working with a highly reputed organization and enhance my skill set."
+    },
+    "resume": "download resume",
+    "hi": "Say Hi!",
+    "findMe": "Or Find Me At",
+    "email": "Email Me"
 }
