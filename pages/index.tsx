@@ -36,7 +36,7 @@ export default function Home({
                     href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&family=Montserrat:wght@200&display=swap"
                     rel="stylesheet"
                     media="print"
-                    onLoad={this.media='all'}
+                    onLoad={() => this.media='all'}
                 />
             </Head>
 
