@@ -3,12 +3,10 @@ import Button from './Button';
 import cover from 'public/cover.jpg';
 
 export default function About({
-    src,
     salute,
     intro,
     resume,
 }: {
-    src: string;
     salute: string;
     resume: string;
     intro: { para1: string; para2: string; para3: string };
@@ -20,6 +18,7 @@ export default function About({
                     src={cover}
                     width={45}
                     height={65}
+                    alt="Anurag Verma"
                     layout="responsive"
                     loading="lazy"
                     placeholder="blur"
