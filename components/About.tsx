@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Button from './Button';
+import cover from 'public/cover.jpg';
+
 export default function About({
     src,
     salute,
@@ -15,11 +17,12 @@ export default function About({
         <div className="flex flex-col md:flex-row md:justify-evenly font-raleway my-8 animate-fadeIn">
             <span className="md:w-1/2 w-full relative px-4 lg:px-32">
                 <Image
-                    src={src}
+                    src={cover}
                     width={45}
                     height={65}
                     layout="responsive"
                     loading="lazy"
+                    placeholder="blur"
                     quality={50}
                     className="rounded-xl"
                 />
