@@ -70,6 +70,7 @@ export default function SocialButtons({
                 <span className="flex gap-2">
                     <LinkIcon
                         url="https://github.com/whoanuragverma/"
+                        name="GitHub"
                         svg={
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -118,6 +119,7 @@ export default function SocialButtons({
                     />
                     <LinkIcon
                         url="https://linkedin.com/in/whoanuragverma"
+                        name="LinkedIn"
                         svg={
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -143,7 +145,6 @@ export default function SocialButtons({
                                     x2="120"
                                     y2="176.00094"
                                     fill="none"
-                                    stroke="#000000"
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
                                     strokeWidth="16"
@@ -154,7 +155,6 @@ export default function SocialButtons({
                                     x2="88"
                                     y2="176.00094"
                                     fill="none"
-                                    stroke="#000000"
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
                                     strokeWidth="16"
@@ -162,12 +162,66 @@ export default function SocialButtons({
                                 <path
                                     d="M120,140.00094a28,28,0,1,1,56,0v36"
                                     fill="none"
-                                    stroke="#000000"
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
                                     strokeWidth="16"
                                 ></path>
                                 <circle cx="88" cy="79.99998" r="12"></circle>
+                            </svg>
+                        }
+                    />
+                    <LinkIcon
+                        name="twitter"
+                        url="https://twitter.com/whoanuragverma"
+                        svg={
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                className="fill-current stroke-current"
+                                viewBox="0 0 256 256"
+                            >
+                                <path
+                                    d="M48,200s40-8,48-32c0,0-64-24-48-112,0,0,32,40,80,48V88.00288a40.00668,40.00668,0,0,1,76.67148-16.00327L240,72l-32,32c0,56-40,112-112,112C64,216,48,200,48,200Z"
+                                    fill="none"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="16"
+                                ></path>
+                            </svg>
+                        }
+                    />
+                    <LinkIcon
+                        url="https://www.instagram.com/whoanuragverma/"
+                        name="Instagram"
+                        svg={
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                className="fill-current stroke-current"
+                                viewBox="0 0 256 256"
+                            >
+                                <circle
+                                    cx="128"
+                                    cy="128"
+                                    r="40"
+                                    fill="none"
+                                    strokeMiterlimit="10"
+                                    strokeWidth="16"
+                                ></circle>
+                                <rect
+                                    x="36"
+                                    y="36"
+                                    width="184"
+                                    height="184"
+                                    rx="48"
+                                    strokeWidth="16"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    fill="none"
+                                ></rect>
+                                <circle cx="180" cy="75.99998" r="12"></circle>
                             </svg>
                         }
                     />

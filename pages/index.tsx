@@ -4,11 +4,11 @@ import Head from 'next/head';
 import NavBar from 'components/NavBar';
 import MainSection from 'components/MainSection';
 import Project from 'components/Project';
-import { getImage } from '@plaiceholder/next';
-import { getBase64 } from '@plaiceholder/base64';
+import { getPlaiceholder } from 'plaiceholder';
 import About from 'components/About';
 import SocialButtons from 'components/SocialButtons';
-
+import Divider from 'components/Divider';
+import Footer from 'components/Footer';
 export default function Home({
     translation,
     meschain,
@@ -41,18 +41,20 @@ export default function Home({
             <NavBar translation={translation} />
             <div className="mt-20 px-6 py-6 md:px-12 bg-white dark:bg-black  text-black dark:text-white">
                 <MainSection translation={translation} />
-                <span className="block w-full h-px bg-black my-16 dark:bg-white opacity-20"></span>
+                <Divider />
                 <h2 className="text-3xl font-raleway pb-5 font-bold">
                     {translation.featured}
                 </h2>
                 <Project {...meschain} />
                 <Project {...ratemyprof} />
-                <span className="block w-full h-px bg-black my-16 dark:bg-white opacity-20"></span>
+                <Divider />
                 <h2 className="text-3xl font-raleway pb-5 font-bold">
                     {translation.touch}
                 </h2>
                 <About {...about} />
                 <SocialButtons {...about} />
+                <Divider />
+                <Footer />
             </div>
         </>
     );
@@ -68,11 +70,11 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     const meschain: Projects = JSON.parse(
         await fs.readFile(`i18n/${locale}/projects/meschain.json`, 'utf-8')
     );
-    meschain.imgBase64 = await getBase64(await getImage(meschain.imgPath));
+    meschain.imgBase64 = (await getPlaiceholder(meschain.imgPath)).base64;
     const ratemyprof: Projects = JSON.parse(
         await fs.readFile(`i18n/${locale}/projects/ratemyprof.json`, 'utf-8')
     );
-    ratemyprof.imgBase64 = await getBase64(await getImage(ratemyprof.imgPath));
+    ratemyprof.imgBase64 = (await getPlaiceholder(ratemyprof.imgPath)).base64;
     const translation: Translation = { ...common, ...home };
     const about: About = JSON.parse(
         await fs.readFile(`i18n/${locale}/about.json`, 'utf-8')
