@@ -23,18 +23,12 @@ export default function Home({
     return (
         <>
             <Head>
+                <title>{translation.title}</title>
                 <meta name="description" content={translation.description} />
                 <meta name="keywords" content={translation.keywords} />
-                <meta name="robots" content="index, follow" />
-                <title>{translation.title}</title>
                 <meta
                     name="viewport"
                     content="width=device-width, initial-scale=1, shrink-to-fit=no"
-                />
-                <link rel="preconnect" href="https://fonts.gstatic.com" />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&family=Montserrat:wght@200&display=swap"
-                    rel="stylesheet"
                 />
             </Head>
 

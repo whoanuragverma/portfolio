@@ -1,5 +1,3 @@
-import { AnchorHTMLAttributes } from 'react';
-
 export default function LinkIcon({
     svg,
     url,

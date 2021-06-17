@@ -21,7 +21,7 @@ export default function Button({
                 </a>
             )}
             {hasLink && nextLink && (
-                <Link href={url as string}>
+                <Link href={url as string} passHref>
                     <span className="flex items-center content-centers">
                         {label}
                         {svg}
