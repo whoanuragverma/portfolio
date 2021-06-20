@@ -1,5 +1,5 @@
 const { withPlaiceholder } = require('@plaiceholder/next');
-require('sharp');
+
 
 module.exports = withPlaiceholder({
     webpack5: true,
