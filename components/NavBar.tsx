@@ -40,7 +40,7 @@ export default function NavBar({
     return (
         <nav className="font-raleway shadow top-0 font-bold px-6 md:px-12 py-6 fixed flex items-center w-screen animate-fadeIn bg-white dark:bg-black dark:text-white z-10">
             <Link passHref href="/">
-                <span className="flex items-center space-x-4 cursor-pointer">
+                <a className="flex items-center space-x-4 cursor-pointer">
                     <svg
                         width="45"
                         height="45"
@@ -54,23 +54,23 @@ export default function NavBar({
                             strokeWidth="0.8"
                         />
                     </svg>
-                    <span className="font-montserrat text-lg md:text-2xl lowercase">
+                    <span className="font-montserrat text-lg md:text-2xl lowercase font-normal">
                         {translation.title}
                     </span>
-                </span>
+                </a>
             </Link>
             <div className="flex-grow hidden justify-end uppercase text-sm font-medium md:flex dark:text-gray-50 items-center">
                 <Link passHref href="/">
-                    <span
+                    <a
                         className={`mx-6 cursor-pointer transition ${
                             router.pathname == '/' ? 'active font-bold' : ''
                         } animate-underline dark:animate-underline`}
                     >
                         {translation.home}
-                    </span>
+                    </a>
                 </Link>
                 <Link passHref href="/about">
-                    <span
+                    <a
                         className={`mx-6 cursor-pointer transition ${
                             router.pathname == '/about'
                                 ? 'active font-bold'
@@ -78,10 +78,10 @@ export default function NavBar({
                         } animate-underline dark:animate-underline`}
                     >
                         {translation.about}
-                    </span>
+                    </a>
                 </Link>
                 <Link passHref href="/projects">
-                    <span
+                    <a
                         className={`mx-6 cursor-pointer transition ${
                             router.pathname == '/projects'
                                 ? 'active font-bold'
@@ -89,10 +89,10 @@ export default function NavBar({
                         } animate-underline dark:animate-underline`}
                     >
                         {translation.projects}
-                    </span>
+                    </a>
                 </Link>
                 <Link passHref href="/contact">
-                    <span
+                    <a
                         className={`mx-6 cursor-pointer transition ${
                             router.pathname == '/contact'
                                 ? 'active font-bold'
@@ -100,16 +100,16 @@ export default function NavBar({
                         } animate-underline dark:animate-underline`}
                     >
                         {translation.contact}
-                    </span>
+                    </a>
                 </Link>
                 <Link passHref href="/lang">
-                    <span
+                    <a
                         className={`mx-6 cursor-pointer transition ${
                             router.pathname == '/lang' ? 'active font-bold' : ''
                         } animate-underline dark:animate-underline`}
                     >
                         {translation.lang}
-                    </span>
+                    </a>
                 </Link>
                 <button
                     className="mx-3 focus:outline-none"

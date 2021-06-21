@@ -33,7 +33,7 @@ export default function About({
                 <p className="leading-7 text-base my-2">{intro.para3}</p>
                 <Button
                     hasLink={true}
-                    url="./resume.pdf"
+                    url="/resume.pdf"
                     label={resume}
                     svg={
                         <svg

@@ -22,10 +22,10 @@ export default function Button({
             )}
             {hasLink && nextLink && (
                 <Link href={url as string} passHref>
-                    <span className="flex items-center content-centers">
+                    <a className="flex items-center content-centers">
                         {label}
                         {svg}
-                    </span>
+                    </a>
                 </Link>
             )}
             {!hasLink && (

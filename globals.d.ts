@@ -53,3 +53,92 @@ interface About {
     findMe: string;
     email: string;
 }
+
+interface Footer {
+    copy: string;
+    year: number;
+    quick: string;
+    contact: string;
+    links: [
+        {
+            name: string;
+            href: string;
+        }
+    ];
+    contacts: [
+        {
+            name: string;
+            href: string;
+        }
+    ];
+}
+interface OAuth {
+    access_token: string;
+    token_type: string;
+    expires_in: number;
+    refresh_token: string;
+    scope: string;
+}
+
+interface SpotifyAPIData {
+    timestamp?: number;
+    context?: {
+        external_urls?: {
+            spotify?: string;
+        };
+        href?: string;
+        type?: string;
+        uri?: string;
+    };
+    progress_ms?: number;
+    item?: {
+        album?: {
+            album_type?: string;
+            artists?: [
+                {
+                    external_urls?: {
+                        spotify?: string;
+                    };
+                    href?: string;
+                    id?: string;
+                    name?: string;
+                    type?: string;
+                    uri?: string;
+                }
+            ];
+            external_urls?: {
+                spotify?: string;
+            };
+            href?: string;
+            id?: string;
+            images?: [
+                {
+                    height?: number;
+                    url?: string;
+                    width?: number;
+                }
+            ];
+            name?: string;
+            type?: string;
+        };
+        artists?: [
+            {
+                external_urls?: {
+                    spotify?: string;
+                };
+                href?: string;
+                name?: string;
+                type?: string;
+            }
+        ];
+        duration_ms?: number;
+        explicit?: true;
+        external_urls?: {
+            spotify?: string;
+        };
+        name?: string;
+        type?: string;
+        uri?: string;
+    };
+    is_playing?: boolean;
+}
