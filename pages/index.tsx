@@ -93,6 +93,6 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
             footer: footer,
             spotifyAPIData: spotifyAPIData,
         },
-        revalidate: 300, // Revalidate Every 5 minute
+        revalidate: 5, // Revalidate every 5 second
     };
 };
