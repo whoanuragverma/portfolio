@@ -1,22 +1,12 @@
 import LinkCustom from './LinkCustom';
 import Link from 'next/link';
 import Image from 'next/image';
-export default function Footer({
-    footer,
-    spotifyAPIData,
-}: {
-    footer: Footer;
-    spotifyAPIData: SpotifyAPIData;
-}) {
-    const color = [
-        'to-red-800',
-        'to-yellow-800',
-        'to-green-800',
-        'to-blue-800',
-        'to-purple-800',
-        'to-pink-800',
-        'to-indigo-800',
-    ];
+import useSWR from 'swr';
+export default function Footer({ footer }: { footer: Footer }) {
+    const fetcher = (url) => fetch(url).then((res) => res.json());
+    const { data } = useSWR<SpotifyAPIData>('/api/spotify', fetcher, {
+        refreshInterval: 60000,
+    });
     return (
         <div className="grid md:grid-cols-5 grid-flow-row gap-y-5 md:gap-y-0">
             <div className="flex flex-col space-y-2 text-gray-700 dark:text-gray-100 font-raleway">
@@ -67,18 +57,13 @@ export default function Footer({
                 </div>
             </div>
             <div
-                className={`bg-gradient-to-r from-gray-700 ${
-                    color[Math.floor(Math.random() * color.length)]
-                } grid grid-cols-5 w-full max-h-20 shadow-lg text-white rounded-lg items-center py-2 md:px-3 px-2 md:col-span-2 gap-1 font-montserrat`}
+                className={`bg-gradient-to-r from-gray-700 to-green-800 grid grid-cols-5 w-full max-h-20 shadow-lg text-white rounded-lg items-center py-2 md:px-3 px-2 md:col-span-2 gap-1 font-montserrat`}
             >
                 <div className="h-full rounded-md flex content-center items-center">
-                    {spotifyAPIData.item?.album?.images?.[0].url && (
+                    {data?.item?.album?.images?.[0].url && (
                         <Image
-                            src={
-                                spotifyAPIData.item?.album?.images?.[0]
-                                    .url as string
-                            }
-                            alt={spotifyAPIData.item.album.name}
+                            src={data?.item?.album?.images?.[0].url as string}
+                            alt={data?.item.album.name}
                             width={63}
                             height={63}
                             className="rounded-md"
@@ -91,17 +76,17 @@ export default function Footer({
                             {
                                 <a
                                     href={
-                                        spotifyAPIData.item?.album
-                                            ?.external_urls?.spotify
+                                        data?.item?.album?.external_urls
+                                            ?.spotify
                                     }
                                 >
-                                    {spotifyAPIData.item?.name ||
+                                    {data?.item?.name ||
                                         'Nothing Playing on Spotify'}
                                 </a>
                             }
                         </div>
                         <div className="font-light text-xs truncate">
-                            {spotifyAPIData.item?.artists?.map((el, idx) => (
+                            {data?.item?.artists?.map((el, idx) => (
                                 <a
                                     key={idx}
                                     href={el.external_urls?.spotify}
@@ -109,8 +94,7 @@ export default function Footer({
                                     rel="noopener noreferrer"
                                 >
                                     {el.name}
-                                    {idx + 1 !==
-                                    spotifyAPIData.item?.artists?.length
+                                    {idx + 1 !== data?.item?.artists?.length
                                         ? ', '
                                         : ''}
                                 </a>
@@ -119,10 +103,10 @@ export default function Footer({
                     </div>
                     <div
                         className={`bg-white rounded text-black flex items-center content-center px-1 py-1 h-4 text-xs ${
-                            !spotifyAPIData.item?.explicit ? 'hidden' : ''
+                            !data?.item?.explicit ? 'hidden' : ''
                         }`}
                     >
-                        {spotifyAPIData.item?.explicit ? 'E' : ''}
+                        {data?.item?.explicit ? 'E' : ''}
                     </div>
                 </div>
                 <div className="ml-auto">

@@ -9,21 +9,19 @@ import About from 'components/About';
 import SocialButtons from 'components/SocialButtons';
 import Divider from 'components/Divider';
 import Footer from 'components/Footer';
-import SpotifyAPI from 'lib/SpotifyAPI';
+
 export default function Home({
     translation,
     meschain,
     ratemyprof,
     about,
     footer,
-    spotifyAPIData,
 }: {
     translation: Translation;
     meschain: Projects;
     ratemyprof: Projects;
     about: About;
     footer: Footer;
-    spotifyAPIData: SpotifyAPIData;
 }): JSX.Element {
     return (
         <>
@@ -53,7 +51,7 @@ export default function Home({
                 <About {...about} />
                 <SocialButtons {...about} />
                 <Divider />
-                <Footer footer={footer} spotifyAPIData={spotifyAPIData} />
+                <Footer footer={footer} />
             </div>
         </>
     );
@@ -78,8 +76,6 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     const about: About = JSON.parse(
         await fs.readFile(`i18n/${locale}/about.json`, 'utf-8')
     );
-    const spotifyAPIData = await SpotifyAPI();
-
     const footer: Footer = JSON.parse(
         await fs.readFile(`i18n/${locale}/footer.json`, 'utf-8')
     );
@@ -91,8 +87,6 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
             ratemyprof: ratemyprof,
             about: about,
             footer: footer,
-            spotifyAPIData: spotifyAPIData,
         },
-        revalidate: 5, // Revalidate every 5 second
     };
 };
