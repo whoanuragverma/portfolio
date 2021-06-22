@@ -36,7 +36,7 @@ export default function Home({
             </Head>
 
             <NavBar translation={translation} />
-            <div className="mt-20 px-6 py-6 md:px-12 bg-white dark:bg-black  text-black dark:text-white">
+            <div className="mt-20 px-6 pt-6 md:px-12 bg-white dark:bg-black  text-black dark:text-white">
                 <MainSection translation={translation} />
                 <Divider />
                 <h2 className="text-3xl font-raleway pb-5 font-bold">
