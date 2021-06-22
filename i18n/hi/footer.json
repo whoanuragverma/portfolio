@@ -1,0 +1,25 @@
+{
+    "copy": "Anurag Verma Portfolio",
+    "quick": "Quick Links",
+    "links": [
+        { "name": "home", "href": "/" },
+        { "name": "about", "href": "/about" },
+        { "name": "projects", "href": "/projects" },
+        { "name": "language", "href": "/lang" }
+    ],
+    "contact": "Contact Me",
+    "contacts": [
+        {
+            "name": "email me",
+            "href": "mailto:anu.anuragverma@gmail.com"
+        },
+        {
+            "name": "linkedin",
+            "href": "https://linkedin.com/in/whoanuragverma"
+        },
+        {
+            "name": "resume",
+            "href": "/resume.pdf"
+        }
+    ]
+}

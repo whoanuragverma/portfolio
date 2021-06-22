@@ -19,16 +19,12 @@ export default function Project({
 }): JSX.Element {
     return (
         <div className="flex flex-col md:flex-row md:justify-evenly font-raleway my-8 animate-fadeIn">
-            <span className="md:w-1/2 w-full md:self-center relative">
-                <img
-                    aria-hidden="true"
-                    alt="Placeholder"
-                    src={imgBase64}
-                    className="block w-full absolute h-full rounded-xl transform blur-3xl"
-                />
+            <span className="md:w-1/2 w-full md:self-center">
                 <Image
                     src={imgPath}
                     width={430}
+                    placeholder="blur"
+                    blurDataURL={imgBase64}
                     height={230}
                     layout="responsive"
                     loading="lazy"
