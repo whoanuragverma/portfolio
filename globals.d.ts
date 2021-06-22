@@ -59,6 +59,7 @@ interface Footer {
     year: number;
     quick: string;
     contact: string;
+    spotify: string;
     links: [
         {
             name: string;

@@ -85,7 +85,7 @@ export default function Footer({ footer }: { footer: Footer }) {
                     >
                         <div className="flex flex-col truncate">
                             <div className="font-medium truncate">
-                                {
+                                {data?.item?.name && (
                                     <a
                                         href={
                                             data?.item?.album?.external_urls
@@ -94,10 +94,12 @@ export default function Footer({ footer }: { footer: Footer }) {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        {data?.item?.name ||
-                                            'Nothing Playing on Spotify'}
+                                        {data?.item?.name}
                                     </a>
-                                }
+                                )}
+                                {!data?.item?.name && (
+                                    <span>{footer.spotify}</span>
+                                )}
                             </div>
                             <div className="font-light text-xs truncate">
                                 {data?.item?.artists?.map((el, idx) => (
