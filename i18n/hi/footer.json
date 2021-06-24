@@ -1,25 +1,26 @@
 {
-    "copy": "Anurag Verma Portfolio",
-    "quick": "Quick Links",
+    "copy": "अनुराग वर्मा पोर्टफोलियो",
+    "quick": "त्वरित लिंक",
     "links": [
-        { "name": "home", "href": "/" },
-        { "name": "about", "href": "/about" },
-        { "name": "projects", "href": "/projects" },
-        { "name": "language", "href": "/lang" }
+        { "name": "मुखपृष्ठ", "href": "/" },
+        { "name": "बारे में", "href": "/about" },
+        { "name": "परियोजना", "href": "/projects" },
+        { "name": "भाषा", "href": "/lang" }
     ],
-    "contact": "Contact Me",
+    "contact": "संपर्क करें",
     "contacts": [
         {
-            "name": "email me",
+            "name": "ईमेल",
             "href": "mailto:anu.anuragverma@gmail.com"
         },
         {
-            "name": "linkedin",
+            "name": "लिंक्डइन",
             "href": "https://linkedin.com/in/whoanuragverma"
         },
         {
-            "name": "resume",
+            "name": "बायोडाटा",
             "href": "/resume.pdf"
         }
-    ]
+    ],
+    "spotify": "अनुराग के स्पॉटिफाई पर कुछ नहीं चल रहा"
 }
