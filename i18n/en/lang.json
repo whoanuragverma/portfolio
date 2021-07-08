@@ -1,0 +1,20 @@
+{
+    "title": "Language - Anurag Verma",
+    "hero": "Speak some other language?",
+    "message": "My portfolio is available in multiple languages, pick the one which you're most comfortable with.",
+    "langs": [
+        {
+            "name": "English",
+            "locale": "en",
+            "helper": "English"
+        },
+        {
+            "name": "Hindi",
+            "locale": "hi",
+            "helper": "हिन्दी"
+        }
+    ],
+    "help0": "Help me add support for more languages. Please open a pull request on ",
+    "github": "GitHub",
+    "help1": " for new translations."
+}
