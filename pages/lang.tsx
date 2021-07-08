@@ -2,7 +2,6 @@ import { GetStaticProps } from 'next';
 import Footer from 'components/Footer';
 import { promises as fs } from 'fs';
 import NavBar from 'components/NavBar';
-import Divider from 'components/Divider';
 import Link from 'next/link';
 import LinkCustom from 'components/LinkCustom';
 import Head from 'next/head';
@@ -29,7 +28,7 @@ export default function Lang({
                 />
             </Head>
             <NavBar translation={translation} />
-            <div className="mt-20 px-6 pt-6 md:px-12 bg-white dark:bg-black  text-black dark:text-white">
+            <div className="mt-20 px-6 pt-6 md:px-12 bg-white dark:bg-black text-black dark:text-white h-fill-80 flex flex-col">
                 <div className="my-8">
                     <h1 className="text-4xl font-montserrat font-extrabold">
                         {lang.hero}
@@ -65,7 +64,7 @@ export default function Lang({
                         ))}
                     </div>
                 </div>
-                <div className="text-sm font-medium font-montserrat">
+                <div className="text-sm font-medium font-montserrat mb-5">
                     {lang.help0}
                     <LinkCustom
                         name={lang.github}
@@ -73,7 +72,6 @@ export default function Lang({
                     />{' '}
                     {lang.help1}
                 </div>
-                <Divider />
                 <Footer footer={footer} />
             </div>
         </>
