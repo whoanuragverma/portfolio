@@ -7,6 +7,11 @@ module.exports = {
     darkMode: 'class',
     theme: {
         extend: {
+            boxShadow: {
+                red: '0 4px 10px -1px rgba(251, 104, 55, 0.5), 0 2px 4px -1px rgba(251, 104, 55, 0.25)',
+
+                blue: '0 4px 10px -1px rgba(100, 149, 237, 0.5), 0 2px 4px -1px rgba(100, 149, 237, 0.25)',
+            },
             colors: {
                 swatch: {
                     red: '#FF4000',
@@ -54,7 +59,7 @@ module.exports = {
         },
     },
     variants: {
-        extend: {},
+        boxShadow: ['hover', 'dark'],
     },
     plugins: [],
 };

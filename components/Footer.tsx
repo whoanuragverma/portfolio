@@ -9,7 +9,7 @@ export default function Footer({ footer }: { footer: Footer }) {
     });
     return (
         <>
-            <div className="grid md:grid-cols-5 grid-flow-row gap-y-5 md:gap-y-0">
+            <div className="grid md:grid-cols-5 grid-flow-row gap-y-5 md:gap-y-0 mt-auto bg-white dark:bg-black text-black dark:text-white">
                 <div className="flex flex-col space-y-2 text-gray-700 dark:text-gray-100 font-raleway">
                     <svg
                         width="45"
@@ -146,7 +146,7 @@ export default function Footer({ footer }: { footer: Footer }) {
                     </div>
                 </div>
             </div>
-            <div className="grid place-items-center mt-3 pb-1">
+            <div className="grid place-items-center mt-3 pb-1 bg-white dark:bg-black text-black dark:text-white">
                 <div className="font-semibold flex items-center font-montserrat text-gray-700 dark:text-gray-300 text-xs">
                     <span className="pr-1">Powered by</span>
                     <Link href="https://vercel.com" passHref>

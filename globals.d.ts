@@ -143,3 +143,19 @@ interface SpotifyAPIData {
     };
     is_playing?: boolean;
 }
+
+interface AvailableLang {
+    name: string;
+    locale: string;
+    helper: string;
+}
+
+interface Lang {
+    title: string;
+    hero: string;
+    message: string;
+    help0: string;
+    github: string;
+    help1: string;
+    langs: Array<AvailableLang>;
+}
