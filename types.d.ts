@@ -24,6 +24,10 @@ declare global {
             SPOTIFY_CLIENT_ID: string;
             SPOTIFY_CLIENT_SECRET: string;
             SPOTIFY_REFRESH_TOKEN: string;
+            NEXT_PUBLIC_RECAPTCHA_KEY: string;
+            RECAPTCHA_SECRET: string;
+            SENDGRID: string;
+            SENDER_EMAIL: string;
         }
     }
 }

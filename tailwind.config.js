@@ -29,6 +29,9 @@ module.exports = {
             height: {
                 'fill-80': 'calc(100vh - 5rem)',
             },
+            minHeight: {
+                '1/2': '55%',
+            },
             animation: {
                 fadeIn: 'fadeIn 0.5s ease-in-out forwards',
                 fadeInDown:
