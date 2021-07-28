@@ -64,8 +64,8 @@ export default function Lang({
                             Get in Touch
                         </h1>
                         <p className="text-md font-montserrat font-normal">
-                            Enter your details here and I'll get back to you as
-                            soon as possible.
+                            Enter your details here and I&apos;ll get back to
+                            you as soon as possible.
                         </p>
                         {!success && (
                             <form
@@ -140,8 +140,8 @@ export default function Lang({
                         )}
                         {success && (
                             <div className="">
-                                Thank you for contacting, I'll get back to you
-                                via email.
+                                Thank you for contacting, I&apos;ll get back to
+                                you via email.
                             </div>
                         )}
                     </div>
