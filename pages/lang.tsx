@@ -4,6 +4,7 @@ import { promises as fs } from 'fs';
 import NavBar from '../components/NavBar';
 import Link from 'next/link';
 import LinkCustom from '../components/LinkCustom';
+
 import Head from 'next/head';
 export default function Lang({
     footer,
