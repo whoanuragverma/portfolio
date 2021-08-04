@@ -8,6 +8,7 @@ html {
 
 html.dark {
     color-scheme: dark;
+    background-color: #000000;
 }
 
 @layer utilities {

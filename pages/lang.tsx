@@ -1,9 +1,10 @@
 import { GetStaticProps } from 'next';
 import Footer from 'components/Footer';
 import { promises as fs } from 'fs';
-import NavBar from 'components/NavBar';
+import NavBar from '../components/NavBar';
 import Link from 'next/link';
-import LinkCustom from 'components/LinkCustom';
+import LinkCustom from '../components/LinkCustom';
+
 import Head from 'next/head';
 export default function Lang({
     footer,
@@ -52,8 +53,17 @@ export default function Lang({
                                                 : 'hover:shadow-md'
                                         }`}
                                     >
-                                        <span className="font-bold uppercase py-2 text-lg">
+                                        <span className="font-bold uppercase py-2 text-lg flex items-center">
                                             {el.name}
+                                            <span
+                                                className={`font-normal text-xs mx-3 bg-swatch-blueActive dark:bg-swatch-redActive p-1 rounded-full ${
+                                                    el.helper !== 'English'
+                                                        ? 'block'
+                                                        : 'hidden'
+                                                }`}
+                                            >
+                                                BETA
+                                            </span>
                                         </span>
                                         <span className="font-semibold py-2 dark:text-gray-300 text-gray-600">
                                             {el.helper}
