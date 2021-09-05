@@ -6,20 +6,22 @@ import NavBar from '../components/NavBar';
 import SocialButtons from '../components/SocialButtons';
 import Head from 'next/head';
 import { FormEventHandler, LegacyRef, useRef, useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import ReCAPTCHA from 'react-google-recaptcha';
 export default function Lang({
     footer,
     translation,
+    contact,
 }: {
     footer: Footer;
     translation: Translation;
+    contact: Contact;
 }) {
     const { register, handleSubmit } = useForm();
     const recaptchaRef = useRef<ReCAPTCHA>();
     const [submit, setSubmit] = useState(false);
     const [success, setSuccess] = useState(false);
-    const onSubmit: FormEventHandler<HTMLFormElement> | undefined = async (
+    const onSubmit: SubmitHandler<FormEventHandler> | undefined = async (
         inputs
     ) => {
         setSubmit(true);
@@ -54,18 +56,17 @@ export default function Lang({
                     name="viewport"
                     content="width=device-width, initial-scale=1, shrink-to-fit=no"
                 />
-                <title>Contact - Anurag Verma</title>
+                <title>{contact.title}</title>
             </Head>
             <NavBar translation={translation} />
             <div className="mt-20 px-6 pt-6 md:px-12 bg-white dark:bg-black text-black dark:text-white h-fill-80 flex flex-col">
                 <div className="flex md:flex-row items-center flex-col md:min-h-1/2">
                     <div>
                         <h1 className="text-2xl font-montserrat font-bold">
-                            Get in Touch
+                            {contact.touch}
                         </h1>
                         <p className="text-md font-montserrat font-normal">
-                            Enter your details here and I&apos;ll get back to
-                            you as soon as possible.
+                            {contact.hello}
                         </p>
                         {!success && (
                             <form
@@ -74,7 +75,7 @@ export default function Lang({
                             >
                                 <input
                                     {...register('name', { required: true })}
-                                    placeholder="Your Name"
+                                    placeholder={contact.name}
                                     type="text"
                                     className="my-1 py-1 px-2 focus:outline-none rounded bg-gray-100 dark:bg-gray-800"
                                     required
@@ -82,14 +83,14 @@ export default function Lang({
 
                                 <input
                                     {...register('subject', { required: true })}
-                                    placeholder="Subject"
+                                    placeholder={contact.subject}
                                     type="text"
                                     className="my-1 py-1 px-2 focus:outline-none rounded bg-gray-100 dark:bg-gray-800"
                                     required
                                 />
                                 <input
                                     {...register('email', { required: true })}
-                                    placeholder="Your Email"
+                                    placeholder={contact.emailY}
                                     type="email"
                                     className="my-1 py-1 px-2 focus:outline-none rounded bg-gray-100 dark:bg-gray-800"
                                     required
@@ -97,7 +98,7 @@ export default function Lang({
                                 <textarea
                                     {...register('message', { required: true })}
                                     className="my-1 py-1 px-2 focus:outline-none rounded bg-gray-100 dark:bg-gray-800"
-                                    placeholder="Your Message"
+                                    placeholder={contact.message}
                                     required
                                 ></textarea>
 
@@ -105,7 +106,7 @@ export default function Lang({
                                     className="my-2 flex flex-row py-1 px-2 items-center justify-center w-32 mr-auto ml-auto dark:bg-white dark:text-black text-white bg-black rounded-full uppercase dark:focus:outline-white focus:outline-black"
                                     type="submit"
                                 >
-                                    Submit{' '}
+                                    {contact.submit}{' '}
                                     {submit && (
                                         <svg
                                             className="animate-spin h-4 w-4 ml-2"
@@ -138,18 +139,13 @@ export default function Lang({
                                 />
                             </form>
                         )}
-                        {success && (
-                            <div className="">
-                                Thank you for contacting, I&apos;ll get back to
-                                you via email.
-                            </div>
-                        )}
+                        {success && <div className="">{contact.thankyou}</div>}
                     </div>
                     <div className="flex items-center md:mr-auto md:ml-auto flex-col mt-3 md:mt-0 w-full md:w-auto">
                         <h1 className="text-2xl font-montserrat font-bold self-start md:self-auto">
-                            Or find me here
+                            {contact.findme}
                         </h1>
-                        <SocialButtons hi="" findMe="" email="Email Me" />
+                        <SocialButtons hi="" findMe="" email={contact.email} />
                     </div>
                 </div>
                 <Footer footer={footer} />
@@ -166,11 +162,14 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     const common: Translation = JSON.parse(
         await fs.readFile(`i18n/${locale}/common.json`, 'utf-8')
     );
-
+    const contact: Contact = JSON.parse(
+        await fs.readFile(`i18n/${locale}/contact.json`, 'utf-8')
+    );
     return {
         props: {
             translation: common,
             footer: footer,
+            contact: contact,
         },
     };
 };
