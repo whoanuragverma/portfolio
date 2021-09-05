@@ -159,3 +159,17 @@ interface Lang {
     help1: string;
     langs: Array<AvailableLang>;
 }
+
+interface Contact {
+    title: string;
+    touch: string;
+    hello: string;
+    submit: string;
+    thankyou: string;
+    findme: string;
+    email: string;
+    name: string;
+    subject: string;
+    emailY: string;
+    message: string;
+}
