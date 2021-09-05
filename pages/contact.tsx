@@ -6,7 +6,7 @@ import NavBar from '../components/NavBar';
 import SocialButtons from '../components/SocialButtons';
 import Head from 'next/head';
 import { FormEventHandler, LegacyRef, useRef, useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import ReCAPTCHA from 'react-google-recaptcha';
 export default function Lang({
     footer,
@@ -21,7 +21,7 @@ export default function Lang({
     const recaptchaRef = useRef<ReCAPTCHA>();
     const [submit, setSubmit] = useState(false);
     const [success, setSuccess] = useState(false);
-    const onSubmit: FormEventHandler<HTMLFormElement> | undefined = async (
+    const onSubmit: SubmitHandler<FormEventHandler> | undefined = async (
         inputs
     ) => {
         setSubmit(true);
