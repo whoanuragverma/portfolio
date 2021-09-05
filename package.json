@@ -13,6 +13,7 @@
         "@plaiceholder/next": "^2.0.3",
         "@sendgrid/mail": "^7.4.5",
         "next": "^11.1.2",
+        "plaiceholder": "^2.0.1",
         "react": "17.0.2",
         "react-dom": "17.0.2",
         "react-google-recaptcha": "^2.1.0",
