@@ -21,32 +21,31 @@ export default function Lang({
     const recaptchaRef = useRef<ReCAPTCHA>();
     const [submit, setSubmit] = useState(false);
     const [success, setSuccess] = useState(false);
-    const onSubmit: SubmitHandler<FormEvent<HTMLFormElement>> | undefined = async (
-        inputs
-    ) => {
-        setSubmit(true);
-        if (recaptchaRef.current) {
-            const token = await recaptchaRef.current.executeAsync();
-            try {
-                const response = await fetch('/api/sendEmail', {
-                    method: 'POST',
-                    body: JSON.stringify({
-                        ...inputs,
-                        token: token,
-                    }),
-                    headers: { 'content-type': 'application/json' },
-                });
-                const res = await response.json();
-                if (res.status === 200) {
-                    setSuccess(true);
+    const onSubmit: SubmitHandler<FormEvent<HTMLFormElement>> | undefined =
+        async (inputs) => {
+            setSubmit(true);
+            if (recaptchaRef.current) {
+                const token = await recaptchaRef.current.executeAsync();
+                try {
+                    const response = await fetch('/api/sendEmail', {
+                        method: 'POST',
+                        body: JSON.stringify({
+                            ...inputs,
+                            token: token,
+                        }),
+                        headers: { 'content-type': 'application/json' },
+                    });
+                    const res = await response.json();
+                    if (res.status === 200) {
+                        setSuccess(true);
+                    }
+                    setSubmit(false);
+                } catch (err) {
+                    alert(err);
+                    setSubmit(false);
                 }
-                setSubmit(false);
-            } catch (err) {
-                alert(err);
-                setSubmit(false);
             }
-        }
-    };
+        };
     return (
         <>
             <Head>
