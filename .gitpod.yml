@@ -1,0 +1,9 @@
+tasks:
+    - before: git fetch origin
+    - init: git merge main
+    - command: yarn dev
+
+ports:
+    - port: 3000
+      visibility: private
+      onOpen: open-browser
