@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import useTheme from './hooks/useTheme';
 export default function NavBar({
     translation,
 }: {
@@ -8,35 +9,7 @@ export default function NavBar({
 }): JSX.Element {
     const router = useRouter();
     const [open, setOpen] = useState(false);
-    const [theme, setTheme] = useState('light');
-    useEffect(() => {
-        setTheme(
-            localStorage.theme ||
-                (window.matchMedia('(prefers-color-scheme: dark)').matches &&
-                    'dark') ||
-                theme
-        );
-        if (
-            localStorage.theme === 'dark' ||
-            (!('theme' in localStorage) &&
-                window.matchMedia('(prefers-color-scheme: dark)').matches)
-        ) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    }, [theme]);
-    function changeTheme() {
-        if (theme === 'dark') {
-            document.documentElement.classList.remove('dark');
-            localStorage.theme = 'light';
-            setTheme('light');
-        } else {
-            document.documentElement.classList.add('dark');
-            localStorage.theme = 'dark';
-            setTheme('dark');
-        }
-    }
+    const [theme, switchTheme] = useTheme();
     return (
         <nav className="font-raleway shadow top-0 font-bold px-6 md:px-12 py-6 fixed flex items-center w-screen animate-fadeIn bg-white dark:bg-black dark:text-white z-10">
             <Link passHref href="/">
@@ -113,7 +86,7 @@ export default function NavBar({
                 </Link>
                 <button
                     className="mx-3 focus:outline-none"
-                    onClick={changeTheme}
+                    onClick={switchTheme}
                     aria-label="Change Theme"
                 >
                     {theme === 'dark' && (
@@ -248,7 +221,7 @@ export default function NavBar({
                     className="my-3 focus:outline-none animate-fadeInDown opacity-0"
                     //@ts-ignore
                     style={{ '--animation-delay': 6 }}
-                    onClick={changeTheme}
+                    onClick={switchTheme}
                 >
                     {theme === 'dark' && (
                         <svg

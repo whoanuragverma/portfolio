@@ -8,6 +8,7 @@ import Head from 'next/head';
 import { FormEvent, LegacyRef, useRef, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import ReCAPTCHA from 'react-google-recaptcha';
+import useTheme from 'components/hooks/useTheme';
 export default function Lang({
     footer,
     translation,
@@ -20,6 +21,7 @@ export default function Lang({
     const { register, handleSubmit } = useForm();
     const recaptchaRef = useRef<ReCAPTCHA>();
     const [submit, setSubmit] = useState(false);
+    const [theme] = useTheme();
     const [success, setSuccess] = useState(false);
     const onSubmit: SubmitHandler<FormEvent<HTMLFormElement>> | undefined =
         async (inputs) => {
@@ -135,6 +137,7 @@ export default function Lang({
                                     sitekey={
                                         process.env.NEXT_PUBLIC_RECAPTCHA_KEY
                                     }
+                                    theme={theme}
                                 />
                             </form>
                         )}
