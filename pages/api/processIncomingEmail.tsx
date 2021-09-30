@@ -4,7 +4,6 @@ import initMiddleware from '../../components/util/initMiddleware';
 import { simpleParser } from 'mailparser';
 import { randomizeEmail, unradomizeEmail } from 'components/util/shuffleEmail';
 import type { AddressObject } from 'mailparser';
-import { text } from 'body-parser';
 import sendMail from 'components/util/sendMail';
 const multerAny = initMiddleware(multer().any());
 
