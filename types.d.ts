@@ -1,3 +1,5 @@
+import { MongoClient } from 'mongodb';
+
 declare module 'plaiceholder' {
     export function getPlaiceholder(path: string): {
         img: { src: string; width: number; height: number; type: string };
@@ -20,6 +22,9 @@ declare module '*.jpg' {
 
 declare global {
     namespace NodeJS {
+        interface Global {
+            _mongoClientPromise: Promise<MongoClient> | null;
+        }
         interface ProcessEnv {
             SPOTIFY_CLIENT_ID: string;
             SPOTIFY_CLIENT_SECRET: string;
@@ -28,6 +33,9 @@ declare global {
             RECAPTCHA_SECRET: string;
             SENDGRID: string;
             SENDER_EMAIL: string;
+            AUTH_DOMAIN: string;
+            PROXY_EMAIL: string;
+            MONGODB_URI: string;
         }
     }
 }
