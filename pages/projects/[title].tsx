@@ -36,15 +36,17 @@ export default function Project({
     );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
     let path: any[] = [];
-    (await fs.readdir('i18n/en/projects')).map((val) => {
-        path.push({
-            params: {
-                title: val.split('.json')[0],
-            },
+    for(let locale of locales){
+        (await fs.readdir(`i18n/${locale}/projects`)).map((val) => {
+            path.push({
+                params: {
+                    title: val.split('.json')[0],
+                },
+            });
         });
-    });
+    }
     return {
         paths: path,
         fallback: false,
