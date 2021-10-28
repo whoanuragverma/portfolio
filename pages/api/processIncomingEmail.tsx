@@ -26,9 +26,8 @@ export default async function handler(
     if (to.indexOf(`hello@${process.env.AUTH_DOMAIN}`) != -1) {
         // Forward this to proxy email
         const from = (parsedEmail.from as AddressObject).text;
-        const randomEmail = `${await randomizeEmail(from)}@${
-            process.env.AUTH_DOMAIN
-        }`;
+        const randomEmail = `${await randomizeEmail(from)}@${process.env.AUTH_DOMAIN
+            }`;
         await sendMail(
             process.env.PROXY_EMAIL,
             { name: 'Anurag Verma', email: process.env.SENDER_EMAIL },
