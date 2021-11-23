@@ -1,4 +1,5 @@
 interface Translation {
+    moreInfo: ReactNode;
     title: string;
     description: string;
     keywords: string;
@@ -11,6 +12,7 @@ interface Translation {
     greeting: string;
     featured: string;
     touch: string;
+    moreInfo: string;
     heroP1: {
         part0: string;
         link01: string;

@@ -1,0 +1,10 @@
+{
+    "title": "फ़िशिबॉट",
+    "imgPath": "/phishbot.jpg",
+    "link": "/projects/phishbot",
+    "para1": "यह परियोजना विकास के अधीन है।",
+    "para2": "",
+    "view": "प्रोजेक्ट देखें",
+    "tech": ["Python", "JavaScript", "Tensorflow", "TailwindCSS"],
+    "longDesc": ""
+}

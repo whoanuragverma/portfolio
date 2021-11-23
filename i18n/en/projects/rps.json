@@ -1,0 +1,10 @@
+{
+    "title": "Rock Paper Scissors",
+    "imgPath": "/rps.jpg",
+    "link": "/projects/rps",
+    "para1": "Playing rock-paper-scissors is all fun until you play it with a computer, were you have to click your responses. Well this project takes this entire game to another level by utilising on device computer vision based algorithms to determine users move from the live footage from the webcam.",
+    "para2": "All the computation happens on the user's device using tensorflow.js and results are presented with minimum latency as a result Computer will always win.",
+    "view": "View Project",
+    "tech": ["Python", "JavaScript", "Tensorflow", "Bootstrap"],
+    "longDesc": ""
+}

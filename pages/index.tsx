@@ -42,8 +42,10 @@ export default function Home({
                 <h2 className="text-3xl font-raleway pb-5 font-bold">
                     {translation.featured}
                 </h2>
-                <Project {...meschain} />
-                <Project {...ratemyprof} />
+                <div className="project-wrapper">
+                    <Project {...meschain} />
+                    <Project {...ratemyprof} />
+                </div>
                 <Divider />
                 <h2 className="text-3xl font-raleway pb-5 font-bold">
                     {translation.touch}

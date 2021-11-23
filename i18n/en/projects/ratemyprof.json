@@ -4,5 +4,7 @@
     "link": "/projects/ratemyprof",
     "para1": "RateMyProf is a platform enabling students to rate their professors and help others choose the best professor.",
     "para2": "It also allows students to give ratings anonymously and yet preventing spam on the platform using machine learning.",
-    "view": "view project"
+    "view": "view project",
+    "tech": ["React", "Node.js", "MongoDB", "express"],
+    "longDesc": ""
 }

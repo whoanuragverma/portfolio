@@ -56,7 +56,7 @@ export default function NavBar({
                 <Link passHref href="/projects">
                     <a
                         className={`mx-6 cursor-pointer transition ${
-                            router.pathname == '/projects'
+                            router.pathname.includes('projects')
                                 ? 'active font-bold'
                                 : ''
                         } animate-underline dark:animate-underline`}

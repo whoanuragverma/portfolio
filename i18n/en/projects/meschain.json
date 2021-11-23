@@ -4,5 +4,7 @@
     "link": "/projects/meschain",
     "para1": "Meschain aims to solve the major problem with Messaging Apps, Privacy. It is designed on top of blockchain network powered by users with XSalsa20 based public-key authenticated Encryption.",
     "para2": "Everything is encrypted by default and decentralised to the user level. With just a browser anyone can use this selfless messenger.",
-    "view": "View Project"
+    "view": "View Project",
+    "tech": ["React", "TypeScript", "Peer.js"],
+    "longDesc": ""
 }

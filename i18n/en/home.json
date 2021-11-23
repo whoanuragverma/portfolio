@@ -6,8 +6,8 @@
         "part1": " pursuing Computer Science Engineering. I like to work with full-stack Web Apps be it Angular, React, or old-school HTML with Express or Flask. I also like to work with C++ and Python for general software development."
     },
     "heroP2": {
-        "part0": "Currently I am working on a blockchain based messenger project ",
-        "link01": "Meschain",
+        "part0": "Currently I am working on a phising detection chrome extension called PhishBot",
+        "link01": "",
         "part1": " and also improving my DSA skills."
     },
     "heroP3": {
