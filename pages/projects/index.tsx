@@ -18,7 +18,11 @@ export default function Projects({
     return (
         <>
             <Head>
-                <title>{translation.projects.charAt(0).toUpperCase() + translation.projects.substr(1).toLowerCase()} - {translation.title}</title>
+                <title>
+                    {translation.projects.charAt(0).toUpperCase() +
+                        translation.projects.substr(1).toLowerCase()}{' '}
+                    - {translation.title}
+                </title>
                 <meta name="description" content={translation.description} />
                 <meta name="keywords" content={translation.keywords} />
                 <meta
@@ -35,9 +39,9 @@ export default function Projects({
                     {translation.moreInfo}
                 </p>
                 <div className="project-wrapper">
-                    {projects.map((project, idx) =>
+                    {projects.map((project, idx) => (
                         <Project {...project} key={idx} />
-                    )}
+                    ))}
                 </div>
                 <Divider />
                 <Footer footer={footer} />
@@ -57,13 +61,17 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     const projects: Projects[] = [];
     let path: string[] = [];
     (await fs.readdir(`i18n/${locale}/projects`)).map((val) => {
-        path.push(
-            val
-        );
+        path.push(val);
     });
     for (let i = 0; i < path.length; i++) {
-        projects.push(JSON.parse(await fs.readFile(`i18n/${locale}/projects/${path[i]}`, 'utf-8')));
-        projects[i].imgBase64 = (await getPlaiceholder(projects[i].imgPath)).base64;
+        projects.push(
+            JSON.parse(
+                await fs.readFile(`i18n/${locale}/projects/${path[i]}`, 'utf-8')
+            )
+        );
+        projects[i].imgBase64 = (
+            await getPlaiceholder(projects[i].imgPath)
+        ).base64;
     }
     return {
         props: {
