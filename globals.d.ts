@@ -9,10 +9,13 @@ interface Translation {
     contact: string;
     hamburgerHelper: string;
     lang: string;
+    keyword: string;
     greeting: string;
     featured: string;
     touch: string;
     moreInfo: string;
+    tools: string;
+    partner: string;
     heroP1: {
         part0: string;
         link01: string;
@@ -35,10 +38,15 @@ interface Projects {
     title: string;
     imgPath: string;
     link: string;
+    partner: string;
     para1: string;
     para2: string;
+    keywords: Array<string>;
     imgBase64: string;
     view: string;
+    longDesc: string;
+    shortDesc: string;
+    tech: Array<string>;
 }
 
 interface About {
