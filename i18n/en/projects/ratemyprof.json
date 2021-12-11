@@ -1,4 +1,6 @@
 {
+    "demo": "https://ratemyprof-vit.netlify.app",
+    "github": "https://github.com/whoanuragverma",
     "title": "RateMyProf",
     "imgPath": "/ratemyprof.jpg",
     "link": "/projects/ratemyprof",
@@ -6,5 +8,17 @@
     "para2": "It also allows students to give ratings anonymously and yet preventing spam on the platform using machine learning.",
     "view": "view project",
     "tech": ["React", "Node.js", "MongoDB", "express"],
-    "longDesc": ""
+    "longDesc": "RateMyProf is built while keeping both privacy of students and spammy reviews in mind. As a result every new user has to sign-up and verify their email address and even though the ratings and reviews are anonymous but a single user can post them only once.",
+    "keywords": [
+        "Ratings",
+        "Reviews",
+        "Faculty",
+        "Student",
+        "Teaching",
+        "Styled Components"
+    ],
+    "partner": "Solo Project",
+    "problem": "The main problem students face while choosing a professor is about what kind of professor the given person is, due to the pandemic students have tough time in finding about the better professors out there because of the communication gap.",
+    "shortDesc": "Meschain is a professor rating and review website with no string attached!",
+    "type": "Weekend Project"
 }

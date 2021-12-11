@@ -8,7 +8,11 @@ interface Translation {
     about: string;
     contact: string;
     hamburgerHelper: string;
+    type: string;
     lang: string;
+    problem: string;
+    objective: string;
+    solution: string;
     keyword: string;
     greeting: string;
     featured: string;
@@ -32,6 +36,8 @@ interface Translation {
         part1: string;
     };
     resume: string;
+    code: string;
+    demo: string;
 }
 
 interface Projects {
@@ -39,12 +45,16 @@ interface Projects {
     imgPath: string;
     link: string;
     partner: string;
+    github: string;
+    demo: string;
     para1: string;
     para2: string;
     keywords: Array<string>;
     imgBase64: string;
     view: string;
+    type: string;
     longDesc: string;
+    problem: string;
     shortDesc: string;
     tech: Array<string>;
 }

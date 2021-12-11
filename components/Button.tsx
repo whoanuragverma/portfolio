@@ -15,9 +15,9 @@ export default function Button({
     return (
         <button className="my-6 text-base px-4 py-1 bg-black text-white uppercase rounded-full hover:shadow-lg transition-all dark:bg-white dark:text-black dark:hover:shadow-inner focus:outline-none">
             {hasLink && !nextLink && (
-                <a href={url} className="flex items-center content-center">
-                    {label}
+                <a href={url} className="flex items-center content-center" target="_blank" rel='noreferrer noopener'>
                     {svg}
+                    {label}
                 </a>
             )}
             {hasLink && nextLink && (
