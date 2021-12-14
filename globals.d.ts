@@ -1,4 +1,5 @@
 interface Translation {
+    moreInfo: ReactNode;
     title: string;
     description: string;
     keywords: string;
@@ -7,10 +8,18 @@ interface Translation {
     about: string;
     contact: string;
     hamburgerHelper: string;
+    type: string;
     lang: string;
+    problem: string;
+    objective: string;
+    solution: string;
+    keyword: string;
     greeting: string;
     featured: string;
     touch: string;
+    moreInfo: string;
+    tools: string;
+    partner: string;
     heroP1: {
         part0: string;
         link01: string;
@@ -27,16 +36,27 @@ interface Translation {
         part1: string;
     };
     resume: string;
+    code: string;
+    demo: string;
 }
 
 interface Projects {
     title: string;
     imgPath: string;
     link: string;
+    partner: string;
+    github: string;
+    demo: string;
     para1: string;
     para2: string;
+    keywords: Array<string>;
     imgBase64: string;
     view: string;
+    type: string;
+    longDesc: string;
+    problem: string;
+    shortDesc: string;
+    tech: Array<string>;
 }
 
 interface About {

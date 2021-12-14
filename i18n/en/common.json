@@ -9,5 +9,15 @@
     "hamburgerHelper": "Open Menu",
     "lang": "language",
     "touch": "Get in touch",
-    "resume": "download resume"
+    "resume": "download resume",
+    "moreInfo": "Some of my projects are listed below, feel free to contact me if you have any doubts.",
+    "tools": "Tools",
+    "partner": "Partner",
+    "keyword": "Keywords",
+    "type": "Project",
+    "problem": "The problem",
+    "objective": "The Objective",
+    "solution": "The Solution",
+    "code": "View Code",
+    "demo": "View demo"
 }

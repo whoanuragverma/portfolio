@@ -10,7 +10,11 @@ html.dark {
     color-scheme: dark;
     background-color: #000000;
 }
-
+@media (min-width: 768px) {
+    .project-wrapper > div:nth-of-type(even) {
+        flex-direction: row-reverse;
+    }
+}
 @layer utilities {
     .animate-underline {
         position: relative;

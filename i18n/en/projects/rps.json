@@ -1,0 +1,24 @@
+{
+    "demo": "https://whoanuragverma-rock-paper-scissor.glitch.me/",
+    "github": "https://github.com/whoanuragverma/rock-paper-scissor",
+    "title": "Rock Paper Scissors",
+    "imgPath": "/rps.jpg",
+    "link": "/projects/rps",
+    "para1": "Playing rock-paper-scissors is all fun until you play it with a computer, were you have to click your responses. Well this project takes this entire game to another level by utilising on device computer vision based algorithms to determine users move from the live footage from the webcam.",
+    "para2": "All the computation happens on the user's device using tensorflow.js and results are presented with minimum latency as a result Computer will always win.",
+    "view": "view project",
+    "tech": ["Python", "JavaScript", "Tensorflow", "Bootstrap"],
+    "longDesc": "To solve this problem I am using tensorflow.js to determine user's hand pose via the live feed from the webcam, once the hand pose is determined a neural network analyzes it to determine the current move of the person in real time, based on the current move of the user, the computer takes a decision. This process is so fast that the player would never ever win.  All the computations happen on the device without any data being sent anywhere.",
+    "keywords": [
+        "Tensorflow",
+        "Deep Learning",
+        "Neural Network",
+        "Computer Vision",
+        "Artifical Intelligence",
+        "Handpose"
+    ],
+    "partner": "Solo Project",
+    "problem": "Playing rock paper scissors is not fun with a computer because it doesn't feel right to click button. All the computers nowadays have a webcam so what would be a better way to play it in realtime with your hand movements.",
+    "shortDesc": "Want to play rock-paper-scissors on a computer without clicking buttons? Yes you can just like you do in real life!",
+    "type": "Weekend Project"
+}
