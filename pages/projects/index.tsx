@@ -20,7 +20,8 @@ export default function Projects({
             <Head>
                 <title>
                     {translation.projects.charAt(0).toUpperCase() +
-                        translation.projects.substr(1).toLowerCase()} &mdash; {translation.title}
+                        translation.projects.substr(1).toLowerCase()}{' '}
+                    &mdash; {translation.title}
                 </title>
                 <meta name="description" content={translation.description} />
                 <meta name="keywords" content={translation.keywords} />

@@ -1,10 +1,22 @@
 {
-    "title": "वर्ड-प्रेडिक्टर",
+    "github": "https://github.com/whoanuragverma/word-predictor",
+    "title": "Word Predictor",
     "imgPath": "/wordpredictor.jpg",
     "link": "/projects/wordpredictor",
-    "para1": "कभी आपने सोचा है कि स्वत: पूर्ण सुझाव के बिना किसी कंप्यूटर पर दस्तावेज़ टाइप करना कितना कठिन है, वेल वर्ड प्रेडिक्टर एक ब्राउज़र आधारित टेक्स्ट-एडिटर है जो आपके टाइप करते ही अगले सबसे संभावित शब्द की भविष्यवाणी करता है।",
-    "para2": "टेक्स्ट-एडिटर कुछ मिली-सेकंड के भीतर अगले सबसे संभावित शब्द को खोजने के लिए 400K शब्दों का एक शब्दकोश खोजता है। वेबएप में एक WYSIWYG संपादक भी शामिल है जिसके साथ आप सीधे अपने दस्तावेज़ों को प्रिंट और प्रारूपित कर सकते हैं।",
-    "view": "प्रोजेक्ट देखें",
+    "para1": "Have you ever wanted to type a really long doc on a computer? If yes you might have found out that it is a hectic job without any suggestions about what should the next word be. Word predictor is a browser based text-editor that predicts the next possible word from what you're typing.",
+    "para2": "Word predictor is able to predict the next word within a few milliseconds from a huge dictionary of 400K words. The webapp also includes a WYSIWYG text-editor with which you can directly print and proof all your documents.",
+    "view": "view project",
     "tech": ["Python", "Flask", "JavaScript", "Bootstrap"],
-    "longDesc": ""
+    "longDesc": "To build a solution we used a trie data structure to basically search next most possible word from a pool of 400K words and those suggestions are then passed on to a web based API so that it can be consumed by the end user in browser itself. To keep things fast and moving we used C++ to design the word search and then use Inter-process communication (IPC) to connect it with a flask based backend. This flask backend also serves an fully functional webapp to the browser to allow people to edit docs on the fly.",
+    "keywords": [
+        "Trie",
+        "Word Prediction",
+        "Text Editor",
+        "Webapp",
+        "WYSIWYG Editor"
+    ],
+    "partner": "4 teammates",
+    "problem": "Typing a long doc on a PC is no joke, with the habit of using suggestion on smartphones people find it really difficult to type a long document without any suggestions. Altough there are some apps that make these suggestions available, users don't like to install something new everytime they want to do something.",
+    "shortDesc": "Want to use text suggestions while writing a doc on a PC? Well yes you can!",
+    "type": "CSE2003 - Data Structures and Algorithms<br/><b>Instructor:</b> Dr. Gayathri P"
 }
