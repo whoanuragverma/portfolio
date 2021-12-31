@@ -21,6 +21,9 @@ declare module '*.jpg' {
 }
 
 declare global {
+    interface Window {
+        AbsoluteOrientationSensor: any;
+    }
     namespace NodeJS {
         interface Global {
             _mongoClientPromise: Promise<MongoClient> | null;

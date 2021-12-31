@@ -47,7 +47,7 @@ export default function Home({
                     <Project {...ratemyprof} />
                 </div>
                 <Divider />
-                <h2 className="text-3xl font-raleway pb-5 font-bold">
+                <h2 className="text-3xl font-raleway pb-2 font-bold">
                     {translation.touch}
                 </h2>
                 <About {...about} />
