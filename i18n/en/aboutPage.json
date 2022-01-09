@@ -1,0 +1,49 @@
+{
+    "salute": "Hi, I am Anurag 🙋🏻‍♂️",
+    "hello": "Pleasure to have you here!",
+    "descPara1": "I am a junior at Vellore Institute of Technology, Vellore pursuing B. Tech in Computer Science and Engineering with specialization in Internet of Things.",
+    "descPara2": "My academic studies unfold through a series of projects that engaged critical design analysis in distinctive ways and innovated experimentations through multidisciplinary approaches. With strong interest in Web Developement I have built several different solutions using technologies including but not limited Angular, React, Python, C++ and Java.",
+    "resumeLabel": "Download Resume",
+    "sayHi": "Say Hi!",
+    "emailLabel": "Email Me",
+    "about": "About",
+    "aboutPara1": "Anurag Verma is a student of Computer Science and Engineering with specialization in Internet of Things in my Junior year in Vellore Institute of Technology.",
+    "aboutPara2": "My academic studies unfold through a series of projects that engaged critical design analysis in distinctive ways and innovated experimentations through multidisciplinary approaches. With strong interest in Web Developement I have built several different solutions using technologies including but not limited Angular, React, Python, C++ and Java.",
+    "aboutPara3": "All of my work and development is freely available on GitHub, feel free to check out. I am also quite interested in building decentralised applications, thus, feel free to reach out to me for collaboration on the same.",
+    "education": "Education",
+    "educationList": [
+        {
+            "title": "Vellore Institute of Technology, Vellore, India | (In Progress) Class of 2023",
+            "degree": "Candidate for B. Tech in Computer Science with specialization in IOT",
+            "grade": "CGPA: 9.52/10",
+            "achivement": [
+                "● Received Merit Scholarship from VIT University for academic excellence during 2019-20 and 2020-21",
+                "● Relevant Coursework: DSA, DBMS, Web Programming, OS, Java, ToC, Computer Architecture, C++"
+            ]
+        },
+        {
+            "title": "Sunshine High School, Muzaffarpur, India | 2017 - 2019",
+            "degree": "Intermediate with Physics, Chemistry and Mathematics",
+            "grade": "Grade: 94.4%",
+            "achivement": [
+                "● Achieved highest percentage throughout the district"
+            ]
+        },
+        {
+            "title": "Sunshine High School, Muzaffarpur, India | March 2017",
+            "degree": "Matriculation",
+            "grade": "CGPA: 10/10"
+        }
+    ],
+    "additionalLabel": "Additional",
+    "additional": [
+        {
+            "title": "Skills",
+            "body": "HTML/CSS, JavaScript, TypeScript, SQL, MongoDB, AWS, Heroku, Node.JS, Next.JS, React, Java, C/C++, Python, Angular, Tensorflow, git, Bootstrap, TailwindCSS"
+        },
+        {
+            "title": "Languages",
+            "body": "Fluent in English and Hindi"
+        }
+    ]
+}

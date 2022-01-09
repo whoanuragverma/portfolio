@@ -58,7 +58,12 @@ interface Projects {
     shortDesc: string;
     tech: Array<string>;
 }
-
+interface EducationInfoProps {
+    title: string;
+    degree: string;
+    grade: string;
+    achivement?: string[];
+}
 interface About {
     src: string;
     b64: string;
@@ -192,4 +197,25 @@ interface Contact {
     subject: string;
     emailY: string;
     message: string;
+}
+interface additionalProps {
+    title: string;
+    body: string;
+}
+interface AboutJSON {
+    salute: string;
+    hello: string;
+    descPara1: string;
+    descPara2: string;
+    resumeLabel: string;
+    sayHi: string;
+    emailLabel: string;
+    about: string;
+    aboutPara1: string;
+    aboutPara2: string;
+    aboutPara3: string;
+    education: string;
+    educationList: EducationInfoProps[];
+    additionalLabel: string;
+    additional: additionalProps[];
 }

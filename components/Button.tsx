@@ -5,6 +5,7 @@ export default function Button({
     url,
     svg,
     nextLink,
+    ...rest
 }: {
     label: string;
     hasLink: boolean;
@@ -13,7 +14,10 @@ export default function Button({
     svg?: JSX.Element;
 }): JSX.Element {
     return (
-        <button className="my-6  text-base px-4 py-1 bg-black text-white uppercase rounded-full hover:shadow-lg transition-all dark:bg-white dark:text-black dark:hover:shadow-inner focus:outline-none duration-150">
+        <button
+            className="my-6  text-base px-4 py-1 bg-black text-white uppercase rounded-full hover:shadow-lg transition-all dark:bg-white dark:text-black dark:hover:shadow-inner focus:outline-none duration-150"
+            {...rest}
+        >
             {hasLink && !nextLink && (
                 <a
                     href={url}

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Button from './Button';
 import cover from 'public/cover.jpg';
+import useOrientationSensor from './hooks/useOrientationSensor';
 
 export default function About({
     salute,
@@ -11,20 +12,30 @@ export default function About({
     resume: string;
     intro: { para1: string; para2: string; para3: string };
 }): JSX.Element {
+    const angularVelocity = useOrientationSensor();
     return (
         <div className="flex flex-col md:flex-row md:justify-evenly font-raleway my-8 animate-fadeIn">
-            <span className="md:w-1/2 w-full relative px-4 lg:px-32">
-                <Image
-                    src={cover}
-                    width={45}
-                    height={65}
-                    alt="Anurag Verma"
-                    layout="responsive"
-                    loading="lazy"
-                    placeholder="blur"
-                    quality={50}
-                    className="rounded-xl"
-                />
+            <span className="md:w-1/2 w-full relative px-2 lg:px-24">
+                <div style={{ clipPath: 'inset(4% round 0.75rem)' }}>
+                    <span
+                        className="relative transition-all"
+                        style={{
+                            left: `${-angularVelocity.y}px`,
+                            top: `${-angularVelocity.x}px`,
+                        }}
+                    >
+                        <Image
+                            src={cover}
+                            width={45}
+                            height={65}
+                            alt="Anurag Verma"
+                            layout="responsive"
+                            loading="lazy"
+                            placeholder="blur"
+                            quality={50}
+                        />
+                    </span>
+                </div>
             </span>
             <span className="md:w-1/2 w-full font-medium text-2xl py-5 px-0 md:px-5 md:py-3">
                 <h2 className="text-3xl font-bold mb-5">{salute}</h2>
