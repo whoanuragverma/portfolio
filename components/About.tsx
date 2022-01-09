@@ -15,10 +15,15 @@ export default function About({
     const angularVelocity = useOrientationSensor();
     return (
         <div className="flex flex-col md:flex-row md:justify-evenly font-raleway my-8 animate-fadeIn">
-
-            <span className="md:w-1/2 w-full relative px-2 lg:px-24" >
+            <span className="md:w-1/2 w-full relative px-2 lg:px-24">
                 <div style={{ clipPath: 'inset(4% round 0.75rem)' }}>
-                    <span className="relative transition-all" style={{ left: `${-angularVelocity.y}px`, top: `${-angularVelocity.x}px` }}>
+                    <span
+                        className="relative transition-all"
+                        style={{
+                            left: `${-angularVelocity.y}px`,
+                            top: `${-angularVelocity.x}px`,
+                        }}
+                    >
                         <Image
                             src={cover}
                             width={45}
@@ -28,7 +33,8 @@ export default function About({
                             loading="lazy"
                             placeholder="blur"
                             quality={50}
-                        /></span>
+                        />
+                    </span>
                 </div>
             </span>
             <span className="md:w-1/2 w-full font-medium text-2xl py-5 px-0 md:px-5 md:py-3">
@@ -53,6 +59,6 @@ export default function About({
                     }
                 />
             </span>
-        </div >
+        </div>
     );
 }

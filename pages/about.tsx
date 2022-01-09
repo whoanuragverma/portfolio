@@ -14,19 +14,21 @@ import EducationInfo from 'components/EducationInfo';
 export default function About({
     footer,
     translation,
-    about
+    about,
 }: {
     footer: Footer;
     translation: Translation;
-    about: AboutJSON
+    about: AboutJSON;
 }) {
     const angularVelocity = useOrientationSensor();
     return (
-
         <>
             <Head>
-                <title>{translation.about.charAt(0).toUpperCase() +
-                    translation.about.substr(1).toLowerCase()} &mdash; {translation.title}</title>
+                <title>
+                    {translation.about.charAt(0).toUpperCase() +
+                        translation.about.substr(1).toLowerCase()}{' '}
+                    &mdash; {translation.title}
+                </title>
                 <meta name="description" content={translation.description} />
                 <meta name="keywords" content={translation.keywords} />
                 <meta
@@ -37,9 +39,15 @@ export default function About({
             <NavBar translation={translation} />
             <div className="mt-20 px-6 pt-6 md:px-12 bg-white dark:bg-black  text-black dark:text-white">
                 <div className="flex flex-col md:flex-row md:justify-evenly font-raleway  animate-fadeIn">
-                    <span className="md:w-1/2 w-full relative px-2 lg:px-24" >
+                    <span className="md:w-1/2 w-full relative px-2 lg:px-24">
                         <div style={{ clipPath: 'inset(4% round 0.75rem)' }}>
-                            <span className="relative transition-all" style={{ left: `${-angularVelocity.y}px`, top: `${-angularVelocity.x}px` }}>
+                            <span
+                                className="relative transition-all"
+                                style={{
+                                    left: `${-angularVelocity.y}px`,
+                                    top: `${-angularVelocity.x}px`,
+                                }}
+                            >
                                 <Image
                                     src={cover}
                                     width={45}
@@ -49,20 +57,22 @@ export default function About({
                                     loading="lazy"
                                     placeholder="blur"
                                     quality={50}
-                                /></span>
+                                />
+                            </span>
                         </div>
                     </span>
-                    <span className="md:w-1/2 w-full px-2 lg:px-8 md:pt-6 md:px-5 flex flex-col  justify-around" >
+                    <span className="md:w-1/2 w-full px-2 lg:px-8 md:pt-6 md:px-5 flex flex-col  justify-around">
                         <div>
-                            <h1 className='font-bold font-montserrat text-4xl'>{about.salute}</h1>
-                            <h3 className='font-medium font-montserrat text-2xl my-3'>{about.hello}</h3>
-                            <p className='text-justify'>
-                                {about.descPara1}
-                            </p>
-                            <p className='text-justify'>
-                                {about.descPara2}
-                            </p></div>
-                        <div className='self-center md:self-start'>
+                            <h1 className="font-bold font-montserrat text-4xl">
+                                {about.salute}
+                            </h1>
+                            <h3 className="font-medium font-montserrat text-2xl my-3">
+                                {about.hello}
+                            </h3>
+                            <p className="text-justify">{about.descPara1}</p>
+                            <p className="text-justify">{about.descPara2}</p>
+                        </div>
+                        <div className="self-center md:self-start">
                             <Button
                                 hasLink={true}
                                 url="/resume.pdf"
@@ -239,7 +249,11 @@ export default function About({
                                             strokeLinejoin="round"
                                             strokeWidth="16"
                                         ></path>
-                                        <circle cx="88" cy="79.99998" r="12"></circle>
+                                        <circle
+                                            cx="88"
+                                            cy="79.99998"
+                                            r="12"
+                                        ></circle>
                                     </svg>
                                 }
                             />
@@ -294,10 +308,15 @@ export default function About({
                                             strokeLinejoin="round"
                                             fill="none"
                                         ></rect>
-                                        <circle cx="180" cy="75.99998" r="12"></circle>
+                                        <circle
+                                            cx="180"
+                                            cy="75.99998"
+                                            r="12"
+                                        ></circle>
                                     </svg>
                                 }
-                            /></span>
+                            />
+                        </span>
                     </div>
                     <div className="md:ml-48 md:mr-8 col-span-2 uppercase font-semibold tracking-wider text-2xl">
                         {about.about}
@@ -314,19 +333,22 @@ export default function About({
                         {about.education}
                     </div>
                     <div className="col-span-3 md:mr-16 text-justify">
-                        {about.educationList.map((item, idx) => <EducationInfo {...item} key={idx} />)}
+                        {about.educationList.map((item, idx) => (
+                            <EducationInfo {...item} key={idx} />
+                        ))}
                     </div>
-                </div><Divider />
+                </div>
+                <Divider />
                 <div className="grid md:grid-cols-5 md:gap-x-3 gap-y-4 md:gap-y-6 grid-rows-auto font-montserrat">
                     <div className="md:ml-48 md:mr-8 col-span-2 uppercase font-semibold tracking-wider text-2xl">
                         {about.additionalLabel}
                     </div>
                     <div className="col-span-3 md:mr-16 text-justify">
-
                         {about.additional.map((items, idx) => (
-                            <div className='mb-3' key={idx}>
+                            <div className="mb-3" key={idx}>
                                 <div className="font-bold">{items.title}</div>
-                                <div>{items.body}</div></div>
+                                <div>{items.body}</div>
+                            </div>
                         ))}
                     </div>
                 </div>
@@ -353,7 +375,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
             locale: locale,
             translation: common,
             footer: footer,
-            about: aboutJSON
+            about: aboutJSON,
         },
     };
 };
