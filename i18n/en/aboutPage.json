@@ -43,7 +43,19 @@
         },
         {
             "title": "Languages",
-            "body": "Fluent in English and Hindi"
+            "body": "Fluent in English and Hindi and beginner proficiency in French"
+        }
+    ],
+    "experience": "Experience",
+    "experienceList": [
+        {
+            "title": "Microsoft Corporation | Bengaluru, India",
+            "degree": "Software Engineer Intern",
+            "grade": "May 2022 - July 2022",
+            "achivement": [
+                "● Worked with the workplace analytics team to generate insights from the collected employee activity across Office 365 apps.",
+                "● Delivered scripts that generated insights of over 20+ metrics that helped the product team in prioritising features in Office 365 apps."
+            ]
         }
     ]
 }

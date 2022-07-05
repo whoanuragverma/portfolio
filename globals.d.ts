@@ -209,6 +209,7 @@ interface AboutJSON {
     descPara2: string;
     resumeLabel: string;
     sayHi: string;
+    experience: string;
     emailLabel: string;
     about: string;
     aboutPara1: string;
@@ -216,6 +217,7 @@ interface AboutJSON {
     aboutPara3: string;
     education: string;
     educationList: EducationInfoProps[];
+    experienceList:EducationInfoProps[];
     additionalLabel: string;
     additional: additionalProps[];
 }

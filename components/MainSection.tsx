@@ -23,10 +23,10 @@ export default function MainSection({
                 <br />
                 <p>
                     {translation.heroP2.part0}
-                    {/* <LinkCustom
-                        href="https://meschain.herokuapp.com/"
+                    <LinkCustom
+                        href="https://microsoft.com"
                         name={translation.heroP2.link01}
-                    /> */}
+                    />
                     {translation.heroP2.part1}
                 </p>
                 <br />
