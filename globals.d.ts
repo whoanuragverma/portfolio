@@ -217,7 +217,7 @@ interface AboutJSON {
     aboutPara3: string;
     education: string;
     educationList: EducationInfoProps[];
-    experienceList:EducationInfoProps[];
+    experienceList: EducationInfoProps[];
     additionalLabel: string;
     additional: additionalProps[];
 }
