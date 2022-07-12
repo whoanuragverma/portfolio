@@ -330,6 +330,17 @@ export default function About({
                 <Divider />
                 <div className="grid md:grid-cols-5 md:gap-x-3 gap-y-4 md:gap-y-6 grid-rows-auto font-montserrat">
                     <div className="md:ml-48 md:mr-8 col-span-2 uppercase font-semibold tracking-wider text-2xl">
+                        {about.experience}
+                    </div>
+                    <div className="col-span-3 md:mr-16 text-justify">
+                        {about.experienceList.map((item, idx) => (
+                            <EducationInfo {...item} key={idx} />
+                        ))}
+                    </div>
+                </div>
+                <Divider />
+                <div className="grid md:grid-cols-5 md:gap-x-3 gap-y-4 md:gap-y-6 grid-rows-auto font-montserrat">
+                    <div className="md:ml-48 md:mr-8 col-span-2 uppercase font-semibold tracking-wider text-2xl">
                         {about.education}
                     </div>
                     <div className="col-span-3 md:mr-16 text-justify">
