@@ -102,7 +102,7 @@ export default function About({
                             <Button
                                 label={about.emailLabel}
                                 hasLink={true}
-                                url="mailto:hello@anuragverma.me"
+                                url="mailto:hello@anuragverma.tech"
                                 nextLink={false}
                                 //@ts-ignore
                                 style={{ margin: '0' }}

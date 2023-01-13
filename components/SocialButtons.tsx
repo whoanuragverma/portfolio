@@ -17,7 +17,7 @@ export default function SocialButtons({
                 <Button
                     label={email}
                     hasLink={true}
-                    url="mailto:hello@anuragverma.me"
+                    url="mailto:hello@anuragverma.tech"
                     nextLink={false}
                     svg={
                         <svg

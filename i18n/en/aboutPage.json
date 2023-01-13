@@ -1,7 +1,7 @@
 {
     "salute": "Hi, I am Anurag 🙋🏻‍♂️",
     "hello": "Pleasure to have you here!",
-    "descPara1": "I am a junior at Vellore Institute of Technology, Vellore pursuing B. Tech in Computer Science and Engineering with specialization in Internet of Things.",
+    "descPara1": "I am a senior at Vellore Institute of Technology, Vellore pursuing B. Tech in Computer Science and Engineering with specialization in Internet of Things.",
     "descPara2": "My academic studies unfold through a series of projects that engaged critical design analysis in distinctive ways and innovated experimentations through multidisciplinary approaches. With strong interest in Web Developement I have built several different solutions using technologies including but not limited Angular, React, Python, C++ and Java.",
     "resumeLabel": "Download Resume",
     "sayHi": "Say Hi!",
@@ -15,7 +15,7 @@
         {
             "title": "Vellore Institute of Technology, Vellore, India | (In Progress) Class of 2023",
             "degree": "Candidate for B. Tech in Computer Science with specialization in IOT",
-            "grade": "CGPA: 9.52/10",
+            "grade": "CGPA: 9.42/10",
             "achivement": [
                 "● Received Merit Scholarship from VIT University for academic excellence during 2019-20 and 2020-21",
                 "● Relevant Coursework: DSA, DBMS, Web Programming, OS, Java, ToC, Computer Architecture, C++"
@@ -48,6 +48,14 @@
     ],
     "experience": "Experience",
     "experienceList": [
+        {
+            "title": "Microsoft Corporation | India",
+            "degree": "Upcoming Software Engineer",
+            "grade": "",
+            "achivement": [
+                
+            ]
+        },
         {
             "title": "Microsoft Corporation | Bengaluru, India",
             "degree": "Software Engineer Intern",
