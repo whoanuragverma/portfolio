@@ -67,6 +67,11 @@ export default function Lang({
                                         </span>
                                         <span className="font-semibold py-2 dark:text-gray-300 text-gray-600">
                                             {el.helper}
+                                            {el.helper !== 'English' && (
+                                                <small className="mx-2 font-medium">
+                                                    (Powered by Azure)
+                                                </small>
+                                            )}
                                         </span>
                                     </div>
                                 </a>
@@ -99,6 +104,10 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     const lang: Lang = JSON.parse(
         await fs.readFile(`i18n/${locale}/lang.json`, 'utf-8')
     );
+    const availableLang = JSON.parse(
+        await fs.readFile(`i18n/availableLang.json`, 'utf-8')
+    );
+    lang.langs = availableLang.langs;
     return {
         props: {
             locale: locale,

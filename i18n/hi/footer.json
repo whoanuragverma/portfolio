@@ -1,26 +1,20 @@
 {
-    "copy": "अनुराग वर्मा पोर्टफोलियो",
+    "copy": "अनुराग वर्मा का पोर्टफोलियो",
     "quick": "त्वरित लिंक",
     "links": [
-        { "name": "मुखपृष्ठ", "href": "/" },
-        { "name": "बारे में", "href": "/about" },
-        { "name": "परियोजना", "href": "/projects" },
+        { "name": "घर", "href": "/" },
+        { "name": "करीबन", "href": "/about" },
+        { "name": "परियोजनाओं", "href": "/projects" },
         { "name": "भाषा", "href": "/lang" }
     ],
-    "contact": "संपर्क करें",
+    "contact": "मुझसे संपर्क करें",
     "contacts": [
+        { "name": "ईमेल", "href": "mailto:hello@anuragverma.me" },
         {
-            "name": "ईमेल",
-            "href": "mailto:hello@anuragverma.me"
-        },
-        {
-            "name": "लिंक्डइन",
+            "name": "linkedin",
             "href": "https://linkedin.com/in/whoanuragverma"
         },
-        {
-            "name": "बायोडाटा",
-            "href": "/resume.pdf"
-        }
+        { "name": "सार", "href": "/resume.pdf" }
     ],
-    "spotify": "अनुराग के स्पॉटिफाई पर कुछ नहीं चल रहा"
+    "spotify": "अनुराग के Spotify पर कुछ भी नहीं चल रहा है"
 }
