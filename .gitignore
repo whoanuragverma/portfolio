@@ -32,5 +32,3 @@ yarn-error.log*
 
 # vercel
 .vercel
-i18n
-!i18n/en

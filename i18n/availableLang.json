@@ -1,0 +1,49 @@
+{
+    "langs": [
+        {
+            "name": "English",
+            "locale": "en",
+            "helper": "English"
+        },
+        {
+            "name": "Hindi",
+            "locale": "hi",
+            "helper": "हिन्दी"
+        },
+        {
+            "name": "Spanish",
+            "locale": "es",
+            "helper": "Español"
+        },
+        {
+            "name": "French",
+            "locale": "fr",
+            "helper": "Français"
+        },
+        {
+            "name": "Chinese",
+            "locale": "zh",
+            "helper": "中文"
+        },
+        {
+            "name": "Bengali",
+            "locale": "bn",
+            "helper": "বাংলা"
+        },
+        {
+            "name": "Telugu",
+            "locale": "te",
+            "helper": "తెలుగు"
+        },
+        {
+            "name": "Marathi",
+            "locale": "mr",
+            "helper": "मराठी"
+        },
+        {
+            "name": "Tamil",
+            "locale": "ta",
+            "helper": "தமிழ்"
+        }
+    ]
+}
