@@ -68,9 +68,9 @@ export default function Lang({
                                         <span className="font-semibold py-2 dark:text-gray-300 text-gray-600">
                                             {el.helper}
                                             {el.helper !== 'English' && (
-                                                <small className="mx-2 font-medium">
+                                                <span className="ml-1 font-medium text-xs">
                                                     (Powered by Azure)
-                                                </small>
+                                                </span>
                                             )}
                                         </span>
                                     </div>
