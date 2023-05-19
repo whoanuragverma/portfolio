@@ -87,12 +87,17 @@ async function main() {
     )
         .langs.map((l) => l.locale)
         .filter((k) => k !== 'en');
-    for await (const locale of locales) {
-        for await (const file of files) {
+    const promises = locales.map(async (locale) => {
+        const filePromises = files.map(async (file) => {
             await processFile(file, locale);
             console.log(`Created: ${file} in ${locale}`);
-        }
-    }
+        });
+
+        await Promise.all(filePromises);
+    });
+
+    await Promise.all(promises);
+
 }
 
 main();
